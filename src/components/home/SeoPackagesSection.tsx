@@ -9,8 +9,13 @@ import { cn } from "@/lib/utils";
 
 export default function SeoPackagesSection() {
   return (
-    <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-20 md:px-8 md:py-28">
-      <div className="mx-auto max-w-6xl text-center">
+    <section data-navbar-theme="dark" className="relative overflow-hidden bg-bg-dark px-5 py-20 md:px-8 md:py-28">
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -right-20 top-10 size-80 rounded-full bg-violet/15 blur-3xl" />
+        <div className="absolute -left-24 bottom-0 size-72 rounded-full bg-violet-light/10 blur-3xl" />
+        <div className="absolute left-[20%] top-[15%] size-2 rounded-full bg-violet-light/40 animate-drift" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-6xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet-light">
             / SEO PACKAGES
@@ -23,12 +28,12 @@ export default function SeoPackagesSection() {
         </Reveal>
       </div>
 
-      <StaggerGroup className="mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
+      <StaggerGroup className="relative z-10 mx-auto mt-14 grid max-w-6xl gap-6 md:grid-cols-3">
         {seoPackages.map((pkg) => (
           <StaggerItem key={pkg.id}>
             <div
               className={cn(
-                "relative flex h-full flex-col rounded-3xl border p-7",
+                "relative flex h-full flex-col rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl",
                 pkg.badge ? "border-violet-light bg-white/[0.06]" : "border-white/10 bg-white/[0.03]"
               )}
             >

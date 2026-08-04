@@ -4,10 +4,19 @@ import Reveal from "@/components/shared/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { whyPillars } from "@/lib/data";
 
+const POSTURE_LINES = ["Strategize.", "Create.", "Scale."];
+
 export default function WhyUsSection() {
   return (
-    <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-28">
-      <div className="mx-auto max-w-6xl">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light px-5 py-20 md:px-8 md:py-28">
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -right-24 top-1/4 size-72 rounded-full bg-violet/10 blur-3xl" />
+        <div className="absolute -left-16 bottom-0 size-64 rounded-full bg-gold/10 blur-3xl" />
+        <div className="absolute right-[15%] top-[10%] size-2 rounded-full bg-violet/30 animate-float" />
+        <div className="absolute left-[12%] bottom-[30%] size-2.5 rounded-full bg-gold/30 animate-float-slow" />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-6xl">
         <div className="text-center">
           <Reveal>
             <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
@@ -26,22 +35,20 @@ export default function WhyUsSection() {
         <StaggerGroup className="mx-auto mt-14 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
           {whyPillars.map((pillar) => (
             <StaggerItem key={pillar}>
-              <div className="flex h-full items-center justify-center rounded-2xl border border-violet/15 bg-white px-4 py-6 text-center shadow-sm">
+              <div className="flex h-full items-center justify-center rounded-2xl border border-violet/15 bg-white px-4 py-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet/40 hover:shadow-lg">
                 <span className="font-heading text-sm font-bold text-text-dark">{pillar}</span>
               </div>
             </StaggerItem>
           ))}
         </StaggerGroup>
 
-        <Reveal delay={0.2}>
-          <p className="mt-20 text-center font-heading text-4xl font-extrabold leading-tight text-dark-shade md:text-6xl">
-            Strategize.
-            <br />
-            Create.
-            <br />
-            Scale.
-          </p>
-        </Reveal>
+        <div className="mt-20 text-center font-heading text-4xl font-extrabold leading-tight text-dark-shade md:text-6xl">
+          {POSTURE_LINES.map((line, i) => (
+            <Reveal key={line} delay={0.15 + i * 0.12}>
+              <span className="block">{line}</span>
+            </Reveal>
+          ))}
+        </div>
 
         <Reveal delay={0.3}>
           <div className="mx-auto mt-12 max-w-3xl text-center">

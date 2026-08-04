@@ -29,8 +29,13 @@ export default function TestimonialsSection() {
   const t = testimonials[index];
 
   return (
-    <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-28">
-      <div className="mx-auto max-w-3xl text-center">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-violet-pale px-5 py-20 md:px-8 md:py-28">
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <span className="absolute left-[8%] top-[12%] font-heading text-8xl text-violet/10 animate-float-slow">&ldquo;</span>
+        <span className="absolute right-[10%] bottom-[10%] font-heading text-8xl text-violet/10 animate-float">&rdquo;</span>
+        <div className="absolute left-1/3 top-0 size-64 rounded-full bg-white/40 blur-3xl" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
             / CLIENT VOICES

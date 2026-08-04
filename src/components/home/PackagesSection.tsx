@@ -24,8 +24,14 @@ const CARD_STYLE = {
 
 export default function PackagesSection() {
   return (
-    <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-28">
-      <div className="mx-auto max-w-6xl text-center">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light px-5 py-20 md:px-8 md:py-28">
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -left-24 top-10 size-72 rounded-full bg-violet/10 blur-3xl" />
+        <div className="absolute -right-16 bottom-0 size-80 rounded-full bg-gold/10 blur-3xl" />
+        <div className="absolute left-[10%] top-[15%] size-2 rounded-full bg-violet/30 animate-float" />
+        <div className="absolute right-[8%] top-[60%] size-2.5 rounded-full bg-gold/40 animate-float-slow" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-6xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
             / DIGITAL GROWTH PLANS
@@ -40,12 +46,12 @@ export default function PackagesSection() {
         </Reveal>
       </div>
 
-      <StaggerGroup className="mx-auto mt-14 grid max-w-6xl gap-6 lg:grid-cols-3 lg:items-center">
+      <StaggerGroup className="relative z-10 mx-auto mt-14 grid max-w-6xl gap-6 lg:grid-cols-3 lg:items-center">
         {growthPackages.map((pkg) => {
           const dark = pkg.style === "filled" || pkg.style === "dark";
           return (
             <StaggerItem key={pkg.id}>
-              <div className={cn("relative flex h-full flex-col rounded-3xl p-7 shadow-lg", CARD_STYLE[pkg.style])}>
+              <div className={cn("relative flex h-full flex-col rounded-3xl p-7 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl", CARD_STYLE[pkg.style])}>
                 {pkg.badge && (
                   <span
                     className={cn(
@@ -115,7 +121,7 @@ export default function PackagesSection() {
       </StaggerGroup>
 
       <Reveal delay={0.2}>
-        <div className="mx-auto mt-16 max-w-4xl text-center">
+        <div className="relative z-10 mx-auto mt-16 max-w-4xl text-center">
           <p className="text-sm font-semibold text-text-muted">All plans include —</p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
             {allPlansInclude.map((item) => {

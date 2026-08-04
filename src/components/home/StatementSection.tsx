@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -49,14 +50,11 @@ export default function StatementSection() {
 
   return (
     <section ref={sectionRef} data-navbar-theme="dark" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-dark px-5 py-24 md:px-8">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[12%] top-[18%] size-2.5 rounded-full bg-violet-light/40 animate-drift" />
-        <div className="absolute right-[15%] top-[30%] size-2 rounded-full bg-gold/30 animate-float-slow" />
-        <div className="absolute left-[20%] bottom-[22%] size-3 rounded-full bg-violet/30 animate-float" />
-        <div className="absolute right-[10%] bottom-[15%] size-1.5 rounded-full bg-violet-light/50 animate-drift" />
+      <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/2 size-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet/10 blur-3xl animate-pulse-glow" />
       </div>
-      <div className="relative mx-auto max-w-4xl text-center">
+      <MarketingBackdrop variant="c" tone="dark" />
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
         <p className="font-heading text-[7vw] font-bold leading-[1.25] sm:text-[42px] md:text-[52px]">
           {LINES.map((line, li) => (
             <span key={li} className="block">

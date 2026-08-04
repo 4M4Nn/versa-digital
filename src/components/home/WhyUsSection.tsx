@@ -1,6 +1,7 @@
 "use client";
 
 import Reveal from "@/components/shared/Reveal";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { whyPillars } from "@/lib/data";
 
@@ -12,9 +13,8 @@ export default function WhyUsSection() {
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -right-24 top-1/4 size-72 rounded-full bg-violet/10 blur-3xl" />
         <div className="absolute -left-16 bottom-0 size-64 rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute right-[15%] top-[10%] size-2 rounded-full bg-violet/30 animate-float" />
-        <div className="absolute left-[12%] bottom-[30%] size-2.5 rounded-full bg-gold/30 animate-float-slow" />
       </div>
+      <MarketingBackdrop variant="d" tone="light" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="text-center">

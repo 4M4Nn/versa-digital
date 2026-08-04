@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Star } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { testimonials } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +36,7 @@ export default function TestimonialsSection() {
         <span className="absolute right-[10%] bottom-[10%] font-heading text-8xl text-violet/10 animate-float">&rdquo;</span>
         <div className="absolute left-1/3 top-0 size-64 rounded-full bg-white/40 blur-3xl" />
       </div>
+      <MarketingBackdrop variant="b" tone="light" />
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">

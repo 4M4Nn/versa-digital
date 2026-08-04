@@ -4,13 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { blogPosts } from "@/lib/data";
 
 export default function BlogPreviewSection() {
   return (
-    <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-28">
-      <div className="mx-auto max-w-6xl">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light px-5 py-20 md:px-8 md:py-28">
+      <MarketingBackdrop variant="c" tone="light" />
+      <div className="relative z-10 mx-auto max-w-6xl">
         <div className="flex flex-wrap items-end justify-between gap-4 text-center sm:text-left">
           <div>
             <Reveal>

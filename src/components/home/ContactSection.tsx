@@ -3,13 +3,15 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
 import ContactForm from "@/components/shared/ContactForm";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { siteConfig } from "@/lib/data";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export default function ContactSection() {
   return (
-    <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-28">
-      <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light px-5 py-20 md:px-8 md:py-28">
+      <MarketingBackdrop variant="d" tone="light" />
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-14 lg:grid-cols-2">
         <div>
           <Reveal>
             <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">

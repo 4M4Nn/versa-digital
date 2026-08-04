@@ -2,6 +2,7 @@
 
 import Reveal from "@/components/shared/Reveal";
 import MagneticButton from "@/components/shared/MagneticButton";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export default function CtaBannerSection() {
@@ -10,10 +11,13 @@ export default function CtaBannerSection() {
       data-navbar-theme="dark"
       className="relative overflow-hidden bg-gradient-to-br from-violet to-dark-shade px-5 py-24 text-center md:px-8"
     >
-      <div className="pointer-events-none absolute -left-20 -top-20 size-72 rounded-full bg-white/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 size-72 rounded-full bg-white/5 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -left-20 -top-20 size-72 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -right-20 bottom-0 size-72 rounded-full bg-white/5 blur-3xl" />
+      </div>
+      <MarketingBackdrop variant="a" tone="dark" />
 
-      <div className="relative mx-auto max-w-2xl">
+      <div className="relative z-10 mx-auto max-w-2xl">
         <Reveal>
           <h2 className="font-heading text-4xl font-extrabold leading-tight text-white md:text-6xl">
             Ready to grow

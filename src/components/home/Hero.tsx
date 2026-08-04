@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Star, Bot, TrendingUp } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
 import MagneticButton from "@/components/shared/MagneticButton";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { trustBadges } from "@/lib/data";
 
@@ -23,15 +24,13 @@ export default function Hero() {
       className="relative overflow-hidden bg-bg-light px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40"
     >
       {/* Ambient background */}
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -right-40 -top-40 size-[560px] rounded-full bg-violet/10 blur-3xl" />
         <div className="absolute inset-0 bg-dot-grid opacity-[0.05]" />
-        <div className="absolute left-[8%] top-[20%] size-3 rounded-full bg-violet/30 animate-drift" />
-        <div className="absolute left-[20%] top-[65%] size-2 rounded-full bg-gold/40 animate-float-slow" />
-        <div className="absolute left-[45%] top-[10%] size-2.5 rounded-full bg-violet-light/30 animate-float" />
       </div>
+      <MarketingBackdrop variant="a" tone="light" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[55%_45%] lg:gap-8">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[55%_45%] lg:gap-8">
         {/* LEFT */}
         <div>
           <Reveal>

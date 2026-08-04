@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Check, X, Palette, PenTool, Megaphone, Smartphone, Search, BarChart3 } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { growthPackages, allPlansInclude } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -28,9 +29,8 @@ export default function PackagesSection() {
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -left-24 top-10 size-72 rounded-full bg-violet/10 blur-3xl" />
         <div className="absolute -right-16 bottom-0 size-80 rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute left-[10%] top-[15%] size-2 rounded-full bg-violet/30 animate-float" />
-        <div className="absolute right-[8%] top-[60%] size-2.5 rounded-full bg-gold/40 animate-float-slow" />
       </div>
+      <MarketingBackdrop variant="b" tone="light" />
       <div className="relative z-10 mx-auto max-w-6xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">

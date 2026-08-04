@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 
 const BADGES = [
   "🥇 Kerala's First AEO Agency",
@@ -17,10 +18,13 @@ const ENGINES = ["ChatGPT", "Perplexity", "Gemini", "Google SGE"];
 export default function AeoIntroSection() {
   return (
     <section data-navbar-theme="dark" className="relative overflow-hidden bg-bg-dark px-5 py-24 md:px-8">
-      <div className="pointer-events-none absolute -left-32 top-1/3 size-96 rounded-full bg-violet/20 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-0 size-72 rounded-full bg-violet-light/10 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="absolute -left-32 top-1/3 size-96 rounded-full bg-violet/20 blur-3xl" />
+        <div className="absolute -right-24 bottom-0 size-72 rounded-full bg-violet-light/10 blur-3xl" />
+      </div>
+      <MarketingBackdrop variant="c" tone="dark" />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2">
         <Reveal>
           <div className="mx-auto w-full max-w-md rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-2xl">
             <div className="flex items-center gap-2 border-b border-white/10 pb-3">

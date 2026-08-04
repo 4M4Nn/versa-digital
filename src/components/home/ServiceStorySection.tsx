@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
+import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import SEOVisual from "@/components/home/visuals/SEOVisual";
 import SocialVisual from "@/components/home/visuals/SocialVisual";
 import AdsVisual from "@/components/home/visuals/AdsVisual";
@@ -29,6 +30,13 @@ const TEXT_CLASS = {
   pale: { label: "text-violet", heading: "text-text-dark", body: "text-text-dark/70", check: "text-violet" },
 };
 
+const BACKDROP_VARIANT: Record<string, "a" | "b" | "c" | "d"> = {
+  "seo-aeo": "c",
+  smm: "b",
+  performance: "a",
+  "content-video": "d",
+};
+
 export default function ServiceStorySection({ service }: { service: ServiceStory }) {
   const Visual = VISUALS[service.id];
   const theme = TEXT_CLASS[service.background];
@@ -39,9 +47,11 @@ export default function ServiceStorySection({ service }: { service: ServiceStory
       data-navbar-theme={navTheme}
       className={cn("relative overflow-hidden px-5 py-20 md:px-8 md:py-28", BG_CLASS[service.background])}
     >
+      <MarketingBackdrop variant={BACKDROP_VARIANT[service.id]} tone={navTheme} />
+
       <div
         className={cn(
-          "mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-16",
+          "relative z-10 mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2 lg:gap-16",
           service.reversed && "lg:[&>*:first-child]:order-2"
         )}
       >

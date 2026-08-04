@@ -136,8 +136,8 @@ export const growthPackages: PricingPackage[] = [
     id: "starter",
     name: "Starter",
     price: "₹15,000",
-    period: "one-time",
-    badge: "ONE-TIME SUPPORT",
+    period: "/month",
+    badge: "STARTER MONTHLY",
     description: "Perfect for startups and local businesses.",
     features: [
       { key: "posters", text: "8 Premium Social Media Posters", included: true },
@@ -427,12 +427,12 @@ export const faqs: FaqItem[] = [
   {
     question: "How much does it cost to work with Versa Digital?",
     answer:
-      "Our Digital Growth Plans start at ₹15,000 one-time for the Starter package, and our monthly plans range from ₹25,000 (Growth) to ₹50,000 (Unlimited). SEO-only packages start at ₹2,999/month. See our Packages page for full details.",
+      "Our Digital Growth Plans start at ₹15,000/month for the Starter package, and range up to ₹25,000 (Growth) and ₹50,000 (Unlimited). SEO-only packages start at ₹2,999/month. See our Packages page for full details.",
   },
   {
     question: "Do you require a long-term contract?",
     answer:
-      "Our Growth and Unlimited plans are monthly with no long-term lock-in required, though most clients see the strongest results after 3-6 months of consistent execution. The Starter plan is a one-time engagement with no ongoing commitment.",
+      "All our Digital Growth Plans — Starter, Growth, and Unlimited — are monthly with no long-term lock-in required, though most clients see the strongest results after 3-6 months of consistent execution.",
   },
   {
     question: "How long until I see results?",

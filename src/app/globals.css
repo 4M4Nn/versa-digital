@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-light: #fafafa;
+  --color-bg-dark: #0d0d1a;
+  --color-violet: #6b21a8;
+  --color-violet-light: #9333ea;
+  --color-violet-pale: #f3e8ff;
+  --color-accent: #7c3aed;
+  --color-dark-shade: #1e1b4b;
+  --color-text-dark: #1a1a2e;
+  --color-text-muted: #64748b;
+  --color-gold: #f59e0b;
+
+  --font-heading: var(--font-syne), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-drift: drift 12s ease-in-out infinite;
+  --animate-ticker: ticker 40s linear infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+  --animate-accordion-down: accordion-down 0.25s ease-out;
+  --animate-accordion-up: accordion-up 0.25s ease-out;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(14px, -18px);
+  }
+  66% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--color-bg-light);
+  color: var(--color-text-dark);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(107, 33, 168, 0.2);
+  color: var(--color-text-dark);
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(107, 33, 168, 0.35) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+}
+
+.glass-dark {
+  background: rgba(13, 13, 26, 0.6);
+  backdrop-filter: blur(16px);
+}

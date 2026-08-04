@@ -25,7 +25,7 @@ const CARD_STYLE = {
 
 export default function PackagesSection() {
   return (
-    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light px-5 py-20 md:px-8 md:py-28">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light/90 px-5 py-20 md:px-8 md:py-28">
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -left-24 top-10 size-72 rounded-full bg-violet/10 blur-3xl" />
         <div className="absolute -right-16 bottom-0 size-80 rounded-full bg-gold/10 blur-3xl" />

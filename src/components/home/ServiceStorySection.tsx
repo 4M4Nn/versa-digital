@@ -19,9 +19,9 @@ const VISUALS: Record<string, React.ComponentType> = {
 };
 
 const BG_CLASS = {
-  light: "bg-bg-light",
-  dark: "bg-bg-dark",
-  pale: "bg-violet-pale",
+  light: "bg-bg-light/90",
+  dark: "bg-bg-dark/85",
+  pale: "bg-violet-pale/90",
 };
 
 const TEXT_CLASS = {

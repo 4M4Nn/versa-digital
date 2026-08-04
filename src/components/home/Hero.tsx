@@ -21,8 +21,20 @@ export default function Hero() {
   return (
     <section
       data-navbar-theme="light"
-      className="relative overflow-hidden bg-bg-light px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40"
+      className="relative isolate overflow-hidden px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40"
     >
+      {/* Announcement motion poster, playing behind a light tint so the
+          headline stays fully readable. */}
+      <video
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        src="/announcement-motion.mp4"
+      />
+      <div className="absolute inset-0 -z-10 bg-bg-light/88" />
+
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -right-40 -top-40 size-[560px] rounded-full bg-violet/10 blur-3xl" />

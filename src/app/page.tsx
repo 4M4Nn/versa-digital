@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Ticker from "@/components/shared/Ticker";
+import FixedBackgroundVideo from "@/components/shared/FixedBackgroundVideo";
+import SplitVideoReveal from "@/components/shared/SplitVideoReveal";
 import StatementSection from "@/components/home/StatementSection";
 import ServiceStorySection from "@/components/home/ServiceStorySection";
 import PackagesSection from "@/components/home/PackagesSection";
@@ -35,8 +37,10 @@ const TICKER_ITEMS = [
 export default function HomePage() {
   return (
     <>
+      <FixedBackgroundVideo src="/brand-motion.mp4" />
       <Hero />
       <Ticker items={TICKER_ITEMS} />
+      <SplitVideoReveal src="/brand-motion.mp4" />
       <StatementSection />
       {services.map((service) => (
         <ServiceStorySection key={service.id} service={service} />

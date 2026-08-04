@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
   const t = testimonials[index];
 
   return (
-    <section data-navbar-theme="light" className="relative overflow-hidden bg-violet-pale px-5 py-20 md:px-8 md:py-28">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-violet-pale/90 px-5 py-20 md:px-8 md:py-28">
       <div className="pointer-events-none absolute inset-0 z-0">
         <span className="absolute left-[8%] top-[12%] font-heading text-8xl text-violet/10 animate-float-slow">&ldquo;</span>
         <span className="absolute right-[10%] bottom-[10%] font-heading text-8xl text-violet/10 animate-float">&rdquo;</span>

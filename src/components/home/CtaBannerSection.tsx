@@ -9,7 +9,7 @@ export default function CtaBannerSection() {
   return (
     <section
       data-navbar-theme="dark"
-      className="relative overflow-hidden bg-gradient-to-br from-violet to-dark-shade px-5 py-24 text-center md:px-8"
+      className="relative overflow-hidden bg-gradient-to-br from-violet/92 to-dark-shade/92 px-5 py-24 text-center md:px-8"
     >
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -left-20 -top-20 size-72 rounded-full bg-white/10 blur-3xl" />

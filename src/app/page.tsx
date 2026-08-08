@@ -17,7 +17,7 @@ import ContactSection from "@/components/home/ContactSection";
 import { services, siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Versa Digital — Kerala's #1 AI Digital Marketing Agency",
+  title: "Versa Digital — AI-Powered Digital Marketing Agency in Kerala",
   description:
     "Kerala's first AEO management agency. AI-powered SEO, social media, performance marketing and content creation. Kochi, Kerala.",
 };
@@ -66,14 +66,17 @@ export default function HomePage() {
             url: "https://www.versadigital.in",
             telephone: siteConfig.phone,
             email: siteConfig.email,
+            logo: "https://www.versadigital.in/icon.png",
+            image: "https://www.versadigital.in/icon.png",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Jogeo Building, Chembumukku",
+              streetAddress: "3rd Floor, Jogeo Building, Chembumukku",
               addressLocality: "Kakkanad, Kochi",
               addressRegion: "Kerala",
               postalCode: "682021",
               addressCountry: "IN",
             },
+            parentOrganization: { "@type": "Organization", name: siteConfig.partOf },
           }),
         }}
       />

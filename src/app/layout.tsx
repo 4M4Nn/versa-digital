@@ -31,7 +31,7 @@ const siteUrl = "https://www.versadigital.in";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Versa Digital — Kerala's #1 AI Digital Marketing Agency",
+    default: "Versa Digital — AI-Powered Digital Marketing Agency in Kerala",
     template: `%s | ${siteConfig.name}`,
   },
   description:
@@ -50,18 +50,25 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: siteConfig.name,
-    title: "Versa Digital — Kerala's #1 AI Digital Marketing Agency",
+    title: "Versa Digital — AI-Powered Digital Marketing Agency in Kerala",
     description:
       "Kerala's first AEO management agency. AI-powered SEO, social media, performance marketing and content creation.",
     images: [{ url: "/logo.jpg", width: 1254, height: 1254, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary",
-    title: "Versa Digital — Kerala's #1 AI Digital Marketing Agency",
+    title: "Versa Digital — AI-Powered Digital Marketing Agency in Kerala",
     description: "Kerala's first AEO management agency. AI-powered marketing that thinks, performs, scales.",
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

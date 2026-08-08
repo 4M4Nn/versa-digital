@@ -47,7 +47,7 @@ export default function Hero() {
         <div>
           <Reveal>
             <span className="inline-block font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
-              KERALA&apos;S FIRST AEO MANAGEMENT AGENCY
+              AI-POWERED DIGITAL MARKETING AGENCY
             </span>
           </Reveal>
 

@@ -17,7 +17,7 @@ const ENGINES = ["ChatGPT", "Perplexity", "Gemini", "Google SGE"];
 
 export default function AeoIntroSection() {
   return (
-    <section data-navbar-theme="dark" className="relative overflow-hidden bg-bg-dark/85 px-5 py-24 md:px-8">
+    <section data-navbar-theme="dark" className="relative overflow-hidden bg-bg-dark px-5 py-24 md:px-8">
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -left-32 top-1/3 size-96 rounded-full bg-violet/20 blur-3xl" />
         <div className="absolute -right-24 bottom-0 size-72 rounded-full bg-violet-light/10 blur-3xl" />

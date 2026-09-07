@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Plus_Jakarta_Sans, JetBrains_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -24,6 +24,13 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains",
   weight: ["400", "500", "600"],
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  weight: ["500", "600"],
+  style: ["italic", "normal"],
 });
 
 const siteUrl = "https://www.versadigital.in";
@@ -79,8 +86,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bricolage.variable} ${plusJakarta.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-bg-light font-body text-text-dark antialiased">
+    <html lang="en" className={`${bricolage.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}>
+      <body className="bg-bg-light font-body text-text-dark antialiased bg-grain">
         <LoadingScreen />
         <SmoothScrollProvider>
           <Navbar />

@@ -5,6 +5,7 @@ import { Star, Bot, TrendingUp } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
 import MagneticButton from "@/components/shared/MagneticButton";
 import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
+import OrbitGraphic from "@/components/shared/OrbitGraphic";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { trustBadges } from "@/lib/data";
 
@@ -23,17 +24,7 @@ export default function Hero() {
       data-navbar-theme="light"
       className="relative isolate overflow-hidden px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40"
     >
-      {/* Announcement motion poster, playing behind a light tint so the
-          headline stays fully readable. */}
-      <video
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        src="/announcement-motion.mp4"
-      />
-      <div className="absolute inset-0 -z-10 bg-bg-light/88" />
+      <div className="absolute inset-0 -z-10 bg-bg-light" />
 
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -117,6 +108,10 @@ export default function Hero() {
         {/* RIGHT — motion poster visual */}
         <div className="relative mx-auto h-[440px] w-full max-w-sm lg:h-[520px] lg:max-w-none">
           <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-br from-violet/25 via-violet-light/10 to-transparent blur-2xl" />
+          <OrbitGraphic
+            tone="light"
+            className="absolute left-1/2 top-1/2 size-[420px] -translate-x-1/2 -translate-y-1/2 opacity-60 lg:size-[500px]"
+          />
 
           {/* Phone mockup */}
           <motion.div

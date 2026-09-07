@@ -15,6 +15,7 @@
   --font-heading: var(--font-syne), sans-serif;
   --font-body: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains), monospace;
+  --font-serif: var(--font-fraunces), serif;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-float-slow: float 9s ease-in-out infinite;
@@ -120,4 +121,17 @@ body {
 .glass-dark {
   background: rgba(13, 13, 26, 0.6);
   backdrop-filter: blur(16px);
+}
+
+/* Fine film-grain texture for a tactile, editorial surface — static, no
+   motion, applied as a fixed full-viewport overlay behind all content. */
+.bg-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

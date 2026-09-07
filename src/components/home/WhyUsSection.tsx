@@ -9,7 +9,7 @@ const POSTURE_LINES = ["Strategize.", "Create.", "Scale."];
 
 export default function WhyUsSection() {
   return (
-    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light/90 px-5 py-20 md:px-8 md:py-28">
+    <section data-navbar-theme="light" className="relative overflow-hidden bg-bg-light px-5 py-20 md:px-8 md:py-28">
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -right-24 top-1/4 size-72 rounded-full bg-violet/10 blur-3xl" />
         <div className="absolute -left-16 bottom-0 size-64 rounded-full bg-gold/10 blur-3xl" />
@@ -42,7 +42,7 @@ export default function WhyUsSection() {
           ))}
         </StaggerGroup>
 
-        <div className="mt-20 text-center font-heading text-4xl font-extrabold leading-tight text-dark-shade md:text-6xl">
+        <div className="mt-20 text-center font-serif text-4xl italic leading-tight text-dark-shade md:text-6xl">
           {POSTURE_LINES.map((line, i) => (
             <Reveal key={line} delay={0.15 + i * 0.12}>
               <span className="block">{line}</span>

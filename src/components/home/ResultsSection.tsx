@@ -7,7 +7,7 @@ import { caseStudies } from "@/lib/data";
 
 export default function ResultsSection() {
   return (
-    <section id="portfolio-results" data-navbar-theme="dark" className="relative scroll-mt-20 overflow-hidden bg-bg-dark/85 px-5 py-20 md:px-8 md:py-28">
+    <section id="portfolio-results" data-navbar-theme="dark" className="relative scroll-mt-20 overflow-hidden bg-bg-dark px-5 py-20 md:px-8 md:py-28">
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute -left-20 top-0 size-80 rounded-full bg-violet/15 blur-3xl" />
         <div className="absolute -right-24 bottom-10 size-96 rounded-full bg-violet-light/10 blur-3xl" />

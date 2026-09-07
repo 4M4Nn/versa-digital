@@ -49,7 +49,7 @@ export default function StatementSection() {
   );
 
   return (
-    <section ref={sectionRef} data-navbar-theme="dark" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-dark/85 px-5 py-24 md:px-8">
+    <section ref={sectionRef} data-navbar-theme="dark" className="relative flex min-h-screen items-center justify-center overflow-hidden bg-bg-dark px-5 py-24 md:px-8">
       <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute left-1/2 top-1/2 size-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet/10 blur-3xl animate-pulse-glow" />
       </div>

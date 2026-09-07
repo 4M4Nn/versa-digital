@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import Ticker from "@/components/shared/Ticker";
-import FixedBackgroundVideo from "@/components/shared/FixedBackgroundVideo";
-import SplitVideoReveal from "@/components/shared/SplitVideoReveal";
+import SignatureSection from "@/components/home/SignatureSection";
 import StatementSection from "@/components/home/StatementSection";
 import TwoPortalsSection from "@/components/home/TwoPortalsSection";
 import ServiceStorySection from "@/components/home/ServiceStorySection";
@@ -15,6 +14,7 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import BlogPreviewSection from "@/components/home/BlogPreviewSection";
 import CtaBannerSection from "@/components/home/CtaBannerSection";
 import ContactSection from "@/components/home/ContactSection";
+import GoldDivider from "@/components/shared/GoldDivider";
 import { services, siteConfig, portals } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -39,10 +39,10 @@ const TICKER_ITEMS = [
 export default function HomePage() {
   return (
     <>
-      <FixedBackgroundVideo src="/brand-motion.mp4" />
       <Hero />
       <Ticker items={TICKER_ITEMS} />
-      <SplitVideoReveal src="/brand-motion.mp4" />
+      <SignatureSection />
+      <GoldDivider />
       <StatementSection />
       <TwoPortalsSection />
       {services.map((service) => (
@@ -52,6 +52,7 @@ export default function HomePage() {
       <SeoPackagesSection />
       <AeoIntroSection />
       <WhyUsSection />
+      <GoldDivider />
       <ResultsSection />
       <TestimonialsSection />
       <BlogPreviewSection />

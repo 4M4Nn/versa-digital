@@ -1,26 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import {
-  BarChart3,
-  Megaphone,
-  Search,
-  Play,
-  Target,
-  TrendingUp,
-  Mail,
-  Hash,
-  Smartphone,
-  Globe,
-  Sparkles,
-  AtSign,
-  PenTool,
-  Camera,
-  Film,
-  ThumbsUp,
-  MessageSquare,
-} from "lucide-react";
-import { InstagramIcon } from "@/components/shared/SocialIcons";
+import { Circle, Diamond, Hexagon, Asterisk, Plus, Triangle, Square, CircleDot, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface BackdropPiece {
@@ -32,42 +13,44 @@ interface BackdropPiece {
   anim: "animate-float" | "animate-float-slow" | "animate-drift";
 }
 
+// Abstract, minimal shapes rather than literal marketing-app icons — reads
+// as an editorial motif instead of a scatter of social-media clipart.
 const VARIANTS: Record<string, BackdropPiece[]> = {
   a: [
-    { Icon: InstagramIcon, top: "10%", left: "6%", size: 30, rotate: -8, anim: "animate-float" },
-    { Icon: BarChart3, top: "18%", left: "90%", size: 34, rotate: 6, anim: "animate-float-slow" },
-    { Icon: Megaphone, top: "72%", left: "8%", size: 28, rotate: 12, anim: "animate-drift" },
-    { Icon: Search, top: "82%", left: "88%", size: 26, rotate: -10, anim: "animate-float" },
-    { Icon: TrendingUp, top: "40%", left: "94%", size: 24, anim: "animate-float-slow" },
-    { Icon: Target, top: "6%", left: "78%", size: 22, rotate: 8, anim: "animate-drift" },
-    { Icon: Sparkles, top: "55%", left: "3%", size: 20, anim: "animate-float" },
-    { Icon: Hash, top: "90%", left: "40%", size: 24, rotate: -6, anim: "animate-float-slow" },
+    { Icon: Circle, top: "10%", left: "6%", size: 26, rotate: -8, anim: "animate-float" },
+    { Icon: Hexagon, top: "18%", left: "90%", size: 30, rotate: 6, anim: "animate-float-slow" },
+    { Icon: Diamond, top: "72%", left: "8%", size: 22, rotate: 12, anim: "animate-drift" },
+    { Icon: CircleDot, top: "82%", left: "88%", size: 22, rotate: -10, anim: "animate-float" },
+    { Icon: Triangle, top: "40%", left: "94%", size: 20, anim: "animate-float-slow" },
+    { Icon: Asterisk, top: "6%", left: "78%", size: 24, rotate: 8, anim: "animate-drift" },
+    { Icon: Sparkles, top: "55%", left: "3%", size: 18, anim: "animate-float" },
+    { Icon: Plus, top: "90%", left: "40%", size: 18, rotate: -6, anim: "animate-float-slow" },
   ],
   b: [
-    { Icon: Play, top: "12%", left: "10%", size: 28, rotate: -6, anim: "animate-float" },
-    { Icon: Film, top: "78%", left: "6%", size: 26, rotate: 10, anim: "animate-drift" },
-    { Icon: Camera, top: "20%", left: "92%", size: 30, rotate: -4, anim: "animate-float-slow" },
-    { Icon: PenTool, top: "60%", left: "94%", size: 24, anim: "animate-float" },
-    { Icon: Sparkles, top: "85%", left: "82%", size: 22, rotate: 8, anim: "animate-drift" },
-    { Icon: MessageSquare, top: "8%", left: "82%", size: 22, anim: "animate-float" },
-    { Icon: ThumbsUp, top: "45%", left: "4%", size: 20, rotate: -8, anim: "animate-float-slow" },
+    { Icon: Triangle, top: "12%", left: "10%", size: 24, rotate: -6, anim: "animate-float" },
+    { Icon: Square, top: "78%", left: "6%", size: 20, rotate: 10, anim: "animate-drift" },
+    { Icon: Circle, top: "20%", left: "92%", size: 26, rotate: -4, anim: "animate-float-slow" },
+    { Icon: Diamond, top: "60%", left: "94%", size: 22, anim: "animate-float" },
+    { Icon: Sparkles, top: "85%", left: "82%", size: 18, rotate: 8, anim: "animate-drift" },
+    { Icon: Hexagon, top: "8%", left: "82%", size: 22, anim: "animate-float" },
+    { Icon: Asterisk, top: "45%", left: "4%", size: 20, rotate: -8, anim: "animate-float-slow" },
   ],
   c: [
-    { Icon: Target, top: "14%", left: "8%", size: 32, rotate: 6, anim: "animate-float" },
-    { Icon: BarChart3, top: "76%", left: "10%", size: 30, rotate: -8, anim: "animate-drift" },
-    { Icon: Globe, top: "10%", left: "88%", size: 28, anim: "animate-float-slow" },
-    { Icon: TrendingUp, top: "82%", left: "90%", size: 26, rotate: 10, anim: "animate-float" },
-    { Icon: Mail, top: "50%", left: "95%", size: 22, anim: "animate-drift" },
-    { Icon: AtSign, top: "40%", left: "3%", size: 20, rotate: -6, anim: "animate-float-slow" },
-    { Icon: Smartphone, top: "92%", left: "45%", size: 24, anim: "animate-float" },
+    { Icon: Asterisk, top: "14%", left: "8%", size: 28, rotate: 6, anim: "animate-float" },
+    { Icon: Hexagon, top: "76%", left: "10%", size: 26, rotate: -8, anim: "animate-drift" },
+    { Icon: Circle, top: "10%", left: "88%", size: 24, anim: "animate-float-slow" },
+    { Icon: Triangle, top: "82%", left: "90%", size: 22, rotate: 10, anim: "animate-float" },
+    { Icon: Square, top: "50%", left: "95%", size: 18, anim: "animate-drift" },
+    { Icon: Diamond, top: "40%", left: "3%", size: 18, rotate: -6, anim: "animate-float-slow" },
+    { Icon: CircleDot, top: "92%", left: "45%", size: 20, anim: "animate-float" },
   ],
   d: [
-    { Icon: Sparkles, top: "8%", left: "12%", size: 26, anim: "animate-float" },
-    { Icon: Search, top: "70%", left: "5%", size: 28, rotate: 8, anim: "animate-drift" },
-    { Icon: InstagramIcon, top: "16%", left: "90%", size: 26, rotate: -6, anim: "animate-float-slow" },
-    { Icon: Megaphone, top: "86%", left: "85%", size: 30, anim: "animate-float" },
-    { Icon: Hash, top: "48%", left: "92%", size: 20, rotate: 10, anim: "animate-drift" },
-    { Icon: Target, top: "38%", left: "4%", size: 22, anim: "animate-float-slow" },
+    { Icon: Sparkles, top: "8%", left: "12%", size: 22, anim: "animate-float" },
+    { Icon: CircleDot, top: "70%", left: "5%", size: 24, rotate: 8, anim: "animate-drift" },
+    { Icon: Circle, top: "16%", left: "90%", size: 22, rotate: -6, anim: "animate-float-slow" },
+    { Icon: Diamond, top: "86%", left: "85%", size: 26, anim: "animate-float" },
+    { Icon: Plus, top: "48%", left: "92%", size: 18, rotate: 10, anim: "animate-drift" },
+    { Icon: Asterisk, top: "38%", left: "4%", size: 20, anim: "animate-float-slow" },
   ],
 };
 

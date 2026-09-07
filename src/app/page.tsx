@@ -4,6 +4,7 @@ import Ticker from "@/components/shared/Ticker";
 import FixedBackgroundVideo from "@/components/shared/FixedBackgroundVideo";
 import SplitVideoReveal from "@/components/shared/SplitVideoReveal";
 import StatementSection from "@/components/home/StatementSection";
+import TwoPortalsSection from "@/components/home/TwoPortalsSection";
 import ServiceStorySection from "@/components/home/ServiceStorySection";
 import PackagesSection from "@/components/home/PackagesSection";
 import SeoPackagesSection from "@/components/home/SeoPackagesSection";
@@ -14,12 +15,12 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import BlogPreviewSection from "@/components/home/BlogPreviewSection";
 import CtaBannerSection from "@/components/home/CtaBannerSection";
 import ContactSection from "@/components/home/ContactSection";
-import { services, siteConfig } from "@/lib/data";
+import { services, siteConfig, portals } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Versa Digital — AI-Powered Digital Marketing Agency in Kerala",
+  title: "Versa Digital — Digital Services & Technology, Kerala",
   description:
-    "Kerala's first AEO management agency. AI-powered SEO, social media, performance marketing and content creation. Kochi, Kerala.",
+    "Kerala's first AEO-driven digital services and technology company. Performance marketing, SEO/AEO, social media & web development — plus SaaS, AI automation and ERP/CRM/HRMS builds. Kochi, Kerala.",
 };
 
 const TICKER_ITEMS = [
@@ -27,10 +28,11 @@ const TICKER_ITEMS = [
   "AEO MANAGEMENT",
   "SOCIAL MEDIA",
   "META ADS",
-  "CONTENT CREATION",
-  "BRAND STRATEGY",
+  "WEB DEVELOPMENT",
+  "AI AUTOMATION",
+  "SAAS & EDTECH",
+  "ERP / CRM / HRMS",
   "PERFORMANCE MARKETING",
-  "VIDEO PRODUCTION",
   "KERALA'S FIRST AEO AGENCY",
 ];
 
@@ -42,6 +44,7 @@ export default function HomePage() {
       <Ticker items={TICKER_ITEMS} />
       <SplitVideoReveal src="/brand-motion.mp4" />
       <StatementSection />
+      <TwoPortalsSection />
       {services.map((service) => (
         <ServiceStorySection key={service.id} service={service} />
       ))}
@@ -60,9 +63,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MarketingAgency",
+            "@type": "Organization",
             name: siteConfig.name,
-            description: siteConfig.type,
+            description: siteConfig.positioning,
             url: "https://www.versadigital.in",
             telephone: siteConfig.phone,
             email: siteConfig.email,
@@ -77,6 +80,16 @@ export default function HomePage() {
               addressCountry: "IN",
             },
             parentOrganization: { "@type": "Organization", name: siteConfig.partOf },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Versa Digital Portals",
+              itemListElement: portals.map((portal) => ({
+                "@type": "OfferCatalog",
+                name: portal.label,
+                url: `https://www.versadigital.in${portal.href}`,
+                description: portal.description,
+              })),
+            },
           }),
         }}
       />

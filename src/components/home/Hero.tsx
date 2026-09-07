@@ -47,7 +47,7 @@ export default function Hero() {
         <div>
           <Reveal>
             <span className="inline-block font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
-              AI-POWERED DIGITAL MARKETING AGENCY
+              DIGITAL SERVICES & TECHNOLOGY
             </span>
           </Reveal>
 
@@ -76,8 +76,8 @@ export default function Hero() {
 
           <Reveal delay={0.3}>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-text-muted md:text-lg">
-              We combine AI, creativity, and strategy to build digital brands that perform. Not just
-              social media management — we build digital empires.
+              We combine AI, creativity, and strategy to build digital brands that perform — and
+              the SaaS, automation, and ERP/CRM/HRMS systems that run the business behind them.
             </p>
           </Reveal>
 

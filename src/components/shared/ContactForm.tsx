@@ -11,8 +11,14 @@ const SERVICE_OPTIONS = [
   "AI SEO + AEO",
   "Social Media Marketing",
   "Performance Marketing",
-  "Content + Video",
+  "Web Development",
+  "Lead Generation",
+  "Branding & Content",
   "Full Digital Marketing Package",
+  "SaaS / EdTech Product",
+  "AI & Automation",
+  "Internal Platforms",
+  "ERP / CRM / HRMS",
   "Not sure yet",
 ];
 

@@ -12,11 +12,19 @@ import {
 } from "@/components/shared/SocialIcons";
 
 const serviceLinks = [
+  { label: "Performance Marketing", href: "/services/performance-marketing" },
   { label: "AI SEO + AEO", href: "/seo" },
   { label: "Social Media Marketing", href: "/smm" },
-  { label: "Performance Marketing", href: "/services" },
-  { label: "Content + Video", href: "/services" },
-  { label: "Brand Strategy", href: "/about" },
+  { label: "Web Development", href: "/services/web-development" },
+  { label: "Lead Generation", href: "/services/lead-generation" },
+  { label: "Branding & Content", href: "/services/branding-content" },
+];
+
+const techLinks = [
+  { label: "SaaS & EdTech", href: "/technology/saas-edtech" },
+  { label: "AI & Automation", href: "/technology/ai-automation" },
+  { label: "Internal Platforms", href: "/technology/internal-platforms" },
+  { label: "ERP, CRM & HRMS", href: "/technology/client-solutions" },
 ];
 
 const quickLinks = [
@@ -39,15 +47,15 @@ const socials = [
 export default function Footer() {
   return (
     <footer data-navbar-theme="dark" className="bg-bg-dark px-5 pb-8 pt-16 text-white md:px-8">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-4">
-        <div>
+      <div className="mx-auto grid max-w-7xl gap-12 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center gap-2.5">
             <Logo size={38} onDark />
             <span className="font-heading text-base font-bold tracking-wide">VERSA DIGITAL</span>
           </Link>
           <p className="mt-3 text-sm text-white/60">{siteConfig.tagline}</p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/50">
-            {siteConfig.type}. {siteConfig.subTagline}.
+            {siteConfig.positioning}. {siteConfig.subTagline}.
           </p>
           <div className="mt-5 flex items-center gap-3">
             {socials.map(({ Icon, href, label }) => (
@@ -67,10 +75,25 @@ export default function Footer() {
 
         <div>
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-violet-light">
-            Services
+            Digital Services
           </h4>
           <ul className="mt-4 space-y-2.5">
             {serviceLinks.map((link) => (
+              <li key={link.label}>
+                <Link href={link.href} className="text-sm text-white/60 transition-colors hover:text-white">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-violet-light">
+            Technology
+          </h4>
+          <ul className="mt-4 space-y-2.5">
+            {techLinks.map((link) => (
               <li key={link.label}>
                 <Link href={link.href} className="text-sm text-white/60 transition-colors hover:text-white">
                   {link.label}

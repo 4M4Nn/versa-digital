@@ -1,6 +1,8 @@
 export interface NavLink {
   label: string;
   href: string;
+  description?: string;
+  children?: NavLink[];
 }
 
 export interface ServiceResult {
@@ -97,6 +99,16 @@ export interface FullService {
   description: string;
   process: string[];
   results: string[];
+  href?: string;
+}
+
+export interface Portal {
+  id: "digital-services" | "technology";
+  label: string;
+  shortLabel: string;
+  href: string;
+  tagline: string;
+  description: string;
 }
 
 export interface ChatReply {

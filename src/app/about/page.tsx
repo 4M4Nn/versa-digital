@@ -8,7 +8,7 @@ import { founders, siteConfig } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Versa Digital is part of Versa Growth Ventures — Kerala's first AEO management agency, founded to build digital brands that perform.",
+    "Versa Digital is part of Versa Growth Ventures — Kerala's first AEO-driven digital services and technology company, spanning marketing and full business automation.",
 };
 
 const VALUES = [
@@ -44,6 +44,16 @@ export default function AboutPage() {
               As part of Versa Growth Ventures, we built Versa Digital to close that gap — combining
               AI-powered production, strategic marketing discipline, and Kerala&apos;s first dedicated
               Answer Engine Optimization practice into one agency.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p className="mt-5 text-base leading-relaxed text-text-muted md:text-lg">
+              That same discipline led us further: the same businesses asking us to build their
+              brand were also running on spreadsheets, disconnected tools, and manual processes.
+              So Versa Digital now operates as two portals under one roof — Digital Services, for
+              everything that grows your brand and pipeline, and Technology, for the SaaS
+              products, AI automation, and ERP/CRM/HRMS systems that run your business day to
+              day.
             </p>
           </Reveal>
 

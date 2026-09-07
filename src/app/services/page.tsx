@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Search, Sparkles, Share2, Target, Video, Compass, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
+import { Search, Sparkles, Share2, Target, Video, Compass, MapPin, Code, Magnet, CheckCircle2, ArrowRight, Cpu } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Digital Services",
   description:
-    "AI SEO, AEO, social media marketing, performance marketing, content production, brand strategy, and local SEO — Versa Digital's full service breakdown.",
+    "Performance marketing, AI SEO/AEO, social media marketing, web development, lead generation, and branding & content — Versa Digital's full Digital Services portal.",
 };
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -20,15 +20,17 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   video: Video,
   compass: Compass,
   "map-pin": MapPin,
+  code: Code,
+  magnet: Magnet,
 };
 
 export default function ServicesPage() {
   return (
     <div>
       <PageHero
-        label="/ WHAT WE DO"
+        label="/ DIGITAL SERVICES"
         heading="Every service your brand needs to grow."
-        subtext="Seven disciplines, one AI-powered team — strategy, creative, and performance working together."
+        subtext="Performance marketing, SEO/AEO, social, web development, lead generation and branding — one AI-powered team, working together."
       />
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
@@ -68,14 +70,24 @@ export default function ServicesPage() {
                     </ul>
                   </div>
 
-                  <a
-                    href={whatsappUrl(`Hi Versa Digital, I'd like to know more about ${service.name}.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-violet hover:text-violet-light"
-                  >
-                    Get Started <ArrowRight className="size-4" />
-                  </a>
+                  <div className="mt-6 flex items-center gap-5">
+                    {service.href && (
+                      <Link
+                        href={service.href}
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold text-text-dark hover:text-violet"
+                      >
+                        Learn More <ArrowRight className="size-4" />
+                      </Link>
+                    )}
+                    <a
+                      href={whatsappUrl(`Hi Versa Digital, I'd like to know more about ${service.name}.`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-violet hover:text-violet-light"
+                    >
+                      Get Started <ArrowRight className="size-4" />
+                    </a>
+                  </div>
                 </div>
               </Reveal>
             );
@@ -89,6 +101,28 @@ export default function ServicesPage() {
               className="inline-flex min-h-12 items-center rounded-full bg-violet px-8 text-sm font-semibold text-white transition-colors hover:bg-violet-light"
             >
               See Pricing Packages
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
+      <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-16 md:px-8">
+        <Reveal>
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-5 rounded-3xl border border-white/10 bg-white/[0.04] p-9 text-center md:flex-row md:justify-between md:text-left">
+            <div className="flex items-center gap-4">
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-violet/20">
+                <Cpu className="size-6 text-violet-light" />
+              </div>
+              <div>
+                <h2 className="font-heading text-lg font-bold text-white">Also building your technology?</h2>
+                <p className="mt-1 text-sm text-white/60">SaaS, AI automation, internal platforms, ERP/CRM/HRMS — explore our Technology portal.</p>
+              </div>
+            </div>
+            <Link
+              href="/technology"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-violet-light"
+            >
+              Explore Technology <ArrowRight className="size-4" />
             </Link>
           </div>
         </Reveal>

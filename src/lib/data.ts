@@ -9,11 +9,13 @@ import type {
   FaqItem,
   Founder,
   FullService,
+  Portal,
 } from "@/types";
 
 export const siteConfig = {
   name: "Versa Digital",
   type: "AI-Powered Digital Marketing Agency",
+  positioning: "Digital Services & Technology Company",
   tagline: "Strategize. Create. Scale.",
   subTagline: "Kerala's First AEO Management Agency",
   phone: "+91 9746733133",
@@ -30,11 +32,51 @@ export const siteConfig = {
   youtubeUrl: "https://youtube.com/@versadigital",
 };
 
+export const portals: Portal[] = [
+  {
+    id: "digital-services",
+    label: "Digital Services",
+    shortLabel: "Digital",
+    href: "/services",
+    tagline: "Performance marketing, SEO/AEO, social & brand",
+    description:
+      "Everything that grows your brand and your pipeline — performance marketing, SEO/AEO, social media, web development, lead generation, and branding & content.",
+  },
+  {
+    id: "technology",
+    label: "Technology Products",
+    shortLabel: "Technology",
+    href: "/technology",
+    tagline: "SaaS, AI automation & full business systems",
+    description:
+      "SaaS & EdTech products, AI & automation, internal platforms, and client tech solutions — ERP, CRM, HRMS and end-to-end business automation.",
+  },
+];
+
 export const navLinks: NavLink[] = [
-  { label: "Services", href: "/services" },
+  {
+    label: "Digital Services",
+    href: "/services",
+    children: [
+      { label: "Performance Marketing", href: "/services/performance-marketing", description: "Meta, Google & LinkedIn Ads engineered for ROAS" },
+      { label: "SEO / AEO", href: "/seo", description: "Rank on Google and on AI answer engines" },
+      { label: "Social Media Marketing", href: "/smm", description: "Content that stops the scroll" },
+      { label: "Web Development", href: "/services/web-development", description: "Fast, SEO-ready websites and web apps" },
+      { label: "Lead Generation", href: "/services/lead-generation", description: "Funnels and campaigns built to convert" },
+      { label: "Branding & Content", href: "/services/branding-content", description: "Identity, strategy and content production" },
+    ],
+  },
+  {
+    label: "Technology",
+    href: "/technology",
+    children: [
+      { label: "SaaS & EdTech", href: "/technology/saas-edtech", description: "Product builds for software and education" },
+      { label: "AI & Automation", href: "/technology/ai-automation", description: "AI agents and workflow automation" },
+      { label: "Internal Platforms", href: "/technology/internal-platforms", description: "Custom dashboards and internal tools" },
+      { label: "Client Tech Solutions", href: "/technology/client-solutions", description: "ERP, CRM, HRMS & full automation" },
+    ],
+  },
   { label: "Packages", href: "/packages" },
-  { label: "SEO", href: "/seo" },
-  { label: "AEO", href: "/aeo" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },
@@ -547,6 +589,26 @@ export const faqs: FaqItem[] = [
     answer:
       "Book a free strategy call through our Contact page or WhatsApp us directly. We'll discuss your business and recommend the right package — no pressure, no obligation.",
   },
+  {
+    question: "Does Versa Digital build software, not just marketing?",
+    answer:
+      "Yes. Alongside Digital Services, our Technology portal builds SaaS and EdTech products, AI agents and automation, internal platforms, and full client tech solutions like ERP, CRM, and HRMS systems. See our Technology page for details.",
+  },
+  {
+    question: "What is included in an ERP, CRM, or HRMS build?",
+    answer:
+      "We audit your existing business processes, design or select the right system architecture, build or integrate the software around your workflows, then handle data migration, staff training, and ongoing support — so sales, finance, operations, and HR run on one connected platform instead of scattered spreadsheets and tools.",
+  },
+  {
+    question: "Can Versa Digital automate our internal business operations?",
+    answer:
+      "Yes. Our AI & Automation and Internal Platforms services are built exactly for this — custom AI agents, workflow automation, and internal dashboards that remove repetitive manual work from sales, support, HR, and operations teams.",
+  },
+  {
+    question: "Do you build custom SaaS or EdTech products?",
+    answer:
+      "Yes, end-to-end — from product discovery and UX architecture through a scalable, multi-tenant build with subscription billing and analytics, for both SaaS businesses and EdTech/learning platforms.",
+  },
 ];
 
 export const fullServices: FullService[] = [
@@ -557,6 +619,7 @@ export const fullServices: FullService[] = [
     description: "Technical SEO, on-page optimization, and content strategy built to rank on Google — powered by AI-driven keyword and competitor research.",
     process: ["Technical + competitor audit", "Keyword & content strategy", "On-page + off-page optimization", "Monthly reporting & refinement"],
     results: ["3x organic traffic in 90 days", "Top 3 Google rankings", "Higher quality organic leads"],
+    href: "/seo",
   },
   {
     id: "aeo",
@@ -565,6 +628,7 @@ export const fullServices: FullService[] = [
     description: "Kerala's first AEO discipline — structuring your content so ChatGPT, Perplexity, and Google AI Overviews recommend your business directly.",
     process: ["AI visibility audit", "Structured content & schema", "Trust signal building across sources", "AI answer tracking"],
     results: ["Featured in AI search answers", "First-mover advantage in your industry", "Higher-trust discovery"],
+    href: "/aeo",
   },
   {
     id: "smm",
@@ -573,6 +637,7 @@ export const fullServices: FullService[] = [
     description: "Instagram, Facebook, and LinkedIn management with premium visual storytelling and AI-assisted content calendars.",
     process: ["Brand voice & content pillars", "Content calendar production", "Daily posting & community management", "Monthly growth report"],
     results: ["5x average engagement increase", "10K+ followers in 90 days", "Consistent daily presence"],
+    href: "/smm",
   },
   {
     id: "performance",
@@ -581,6 +646,25 @@ export const fullServices: FullService[] = [
     description: "Meta and Google Ads campaigns engineered around real conversion tracking, not vanity metrics.",
     process: ["Conversion tracking setup", "Audience & creative testing", "Daily bid & budget optimization", "Weekly performance reports"],
     results: ["4x average ROAS", "₹45 average cost per lead", "Real-time optimization"],
+    href: "/services/performance-marketing",
+  },
+  {
+    id: "web-development",
+    icon: "code",
+    name: "Web Development",
+    description: "Fast, SEO-ready websites and web apps built on modern frameworks — designed to convert visitors, not just look good.",
+    process: ["Discovery & sitemap planning", "UI/UX design", "Development & CMS integration", "SEO setup & launch"],
+    results: ["Sub-2s load times", "Fully mobile-first builds", "Built-in SEO/AEO foundations"],
+    href: "/services/web-development",
+  },
+  {
+    id: "lead-generation",
+    icon: "magnet",
+    name: "Lead Generation",
+    description: "Landing pages, funnels, and campaigns engineered specifically to turn traffic into qualified leads in your CRM or WhatsApp.",
+    process: ["Funnel & offer strategy", "Landing page build", "Traffic & retargeting campaigns", "Lead scoring & handoff"],
+    results: ["Lower cost per qualified lead", "Higher funnel conversion rate", "Leads delivered straight to your CRM"],
+    href: "/services/lead-generation",
   },
   {
     id: "content-video",
@@ -589,14 +673,16 @@ export const fullServices: FullService[] = [
     description: "Premium posters, short-form reels, and AI-generated video content produced consistently, every week.",
     process: ["Concept & scripting", "Production (AI-assisted + camera shoots)", "Editing & motion design", "Scheduled publishing"],
     results: ["Scroll-stopping visual content", "Reels optimized for reach", "Consistent weekly output"],
+    href: "/services/branding-content",
   },
   {
     id: "brand-strategy",
     icon: "compass",
-    name: "Brand Strategy",
+    name: "Branding & Content Strategy",
     description: "Positioning, voice, and visual identity groundwork that makes every other channel work harder.",
     process: ["Brand & competitor audit", "Positioning & messaging framework", "Visual identity guidelines", "Rollout across channels"],
     results: ["Consistent brand identity", "Clearer market positioning", "Stronger campaign performance"],
+    href: "/services/branding-content",
   },
   {
     id: "local-seo",
@@ -605,5 +691,45 @@ export const fullServices: FullService[] = [
     description: "Google Business Profile optimization and local search presence so nearby customers find and choose you.",
     process: ["Profile audit & optimization", "Review generation strategy", "Local citation building", "Local ranking tracking"],
     results: ["Higher local map pack rankings", "More direction requests & calls", "Stronger review profile"],
+    href: "/seo",
+  },
+];
+
+export const techOfferings: FullService[] = [
+  {
+    id: "saas-edtech",
+    icon: "graduation-cap",
+    name: "SaaS & EdTech Products",
+    description: "End-to-end product builds for software and education businesses — from MVP to a scalable, multi-tenant SaaS or learning platform.",
+    process: ["Product & market discovery", "UX architecture & data modeling", "Multi-tenant build & integrations", "Launch, analytics & iteration"],
+    results: ["Production-ready SaaS in weeks, not quarters", "Built to scale multi-tenant from day one", "Subscription billing & analytics wired in"],
+    href: "/technology/saas-edtech",
+  },
+  {
+    id: "ai-automation",
+    icon: "bot",
+    name: "AI & Automation",
+    description: "Custom AI agents, chatbots, and workflow automation that remove repetitive work from sales, support, and operations.",
+    process: ["Workflow & bottleneck audit", "AI agent / automation design", "Integration with your existing stack", "Monitoring & continuous tuning"],
+    results: ["Hours of manual work removed weekly", "Faster response times on support & sales", "Automations that scale without new headcount"],
+    href: "/technology/ai-automation",
+  },
+  {
+    id: "internal-platforms",
+    icon: "layout-dashboard",
+    name: "Internal Platforms",
+    description: "Custom dashboards, admin panels, and operational tools built around how your team actually works — not a generic template.",
+    process: ["Ops mapping with your team", "Dashboard & tool design", "Build & role-based access", "Rollout & team training"],
+    results: ["One system instead of five spreadsheets", "Real-time visibility for leadership", "Faster decisions with live operational data"],
+    href: "/technology/internal-platforms",
+  },
+  {
+    id: "client-solutions",
+    icon: "network",
+    name: "Client Tech Solutions — ERP, CRM & HRMS",
+    description: "End-to-end business automation — ERP, CRM, and HRMS systems built or integrated around your business, so every department runs on one connected platform.",
+    process: ["Business process audit", "System architecture & module selection", "Custom build or integration", "Migration, training & support"],
+    results: ["Departments unified on one platform", "Manual data entry eliminated", "Full visibility from sales to HR to finance"],
+    href: "/technology/client-solutions",
   },
 ];

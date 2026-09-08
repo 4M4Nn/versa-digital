@@ -14,9 +14,10 @@ import type {
 
 export const siteConfig = {
   name: "Versa Digital",
+  fullName: "Versa Digital & IT Solutions",
   type: "AI-Powered Digital Marketing Agency",
-  positioning: "Digital Services & Technology Company",
-  tagline: "Strategize. Create. Scale.",
+  positioning: "Digital Services & IT Solutions Company",
+  tagline: "Ideas. Solutions. Growth.",
   subTagline: "Kerala's First AEO Management Agency",
   phone: "+91 9746733133",
   phoneHref: "+919746733133",
@@ -44,12 +45,12 @@ export const portals: Portal[] = [
   },
   {
     id: "technology",
-    label: "Technology Products",
-    shortLabel: "Technology",
-    href: "/technology",
-    tagline: "SaaS, AI automation & full business systems",
+    label: "IT Solutions",
+    shortLabel: "IT Solutions",
+    href: "/it-solutions",
+    tagline: "AI automation, agentic AI & full business systems",
     description:
-      "SaaS & EdTech products, AI & automation, internal platforms, and client tech solutions — ERP, CRM, HRMS and end-to-end business automation.",
+      "SaaS & EdTech products, AI automation and agentic AI projects, internal platforms, and custom ERP & CRM development — end-to-end IT solutions and business automation.",
   },
 ];
 
@@ -67,13 +68,13 @@ export const navLinks: NavLink[] = [
     ],
   },
   {
-    label: "Technology",
-    href: "/technology",
+    label: "IT Solutions",
+    href: "/it-solutions",
     children: [
-      { label: "SaaS & EdTech", href: "/technology/saas-edtech", description: "Product builds for software and education" },
-      { label: "AI & Automation", href: "/technology/ai-automation", description: "AI agents and workflow automation" },
-      { label: "Internal Platforms", href: "/technology/internal-platforms", description: "Custom dashboards and internal tools" },
-      { label: "Client Tech Solutions", href: "/technology/client-solutions", description: "ERP, CRM, HRMS & full automation" },
+      { label: "SaaS & EdTech", href: "/it-solutions/saas-edtech", description: "Product builds for software and education" },
+      { label: "AI Automation & Agentic AI", href: "/it-solutions/ai-automation", description: "AI agents, agentic workflows and automation" },
+      { label: "Internal Platforms", href: "/it-solutions/internal-platforms", description: "Custom dashboards and internal tools" },
+      { label: "Custom ERP, CRM & HRMS", href: "/it-solutions/client-solutions", description: "Client tech solutions & full automation" },
     ],
   },
   { label: "Packages", href: "/packages" },
@@ -592,7 +593,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Does Versa Digital build software, not just marketing?",
     answer:
-      "Yes. Alongside Digital Services, our Technology portal builds SaaS and EdTech products, AI agents and automation, internal platforms, and full client tech solutions like ERP, CRM, and HRMS systems. See our Technology page for details.",
+      "Yes. Alongside Digital Services, our IT Solutions portal builds SaaS and EdTech products, AI automation and agentic AI projects, internal platforms, and custom ERP, CRM, and HRMS systems. See our IT Solutions page for details.",
   },
   {
     question: "What is included in an ERP, CRM, or HRMS build?",
@@ -703,16 +704,16 @@ export const techOfferings: FullService[] = [
     description: "End-to-end product builds for software and education businesses — from MVP to a scalable, multi-tenant SaaS or learning platform.",
     process: ["Product & market discovery", "UX architecture & data modeling", "Multi-tenant build & integrations", "Launch, analytics & iteration"],
     results: ["Production-ready SaaS in weeks, not quarters", "Built to scale multi-tenant from day one", "Subscription billing & analytics wired in"],
-    href: "/technology/saas-edtech",
+    href: "/it-solutions/saas-edtech",
   },
   {
     id: "ai-automation",
     icon: "bot",
-    name: "AI & Automation",
-    description: "Custom AI agents, chatbots, and workflow automation that remove repetitive work from sales, support, and operations.",
-    process: ["Workflow & bottleneck audit", "AI agent / automation design", "Integration with your existing stack", "Monitoring & continuous tuning"],
-    results: ["Hours of manual work removed weekly", "Faster response times on support & sales", "Automations that scale without new headcount"],
-    href: "/technology/ai-automation",
+    name: "AI Automation & Agentic AI",
+    description: "Custom AI agents, agentic AI projects, chatbots, and workflow automation that take real action across your tools — removing repetitive work from sales, support, and operations.",
+    process: ["Workflow & bottleneck audit", "AI agent / agentic workflow design", "Integration with your existing stack", "Monitoring & continuous tuning"],
+    results: ["Hours of manual work removed weekly", "Autonomous agents handling multi-step tasks", "Automations that scale without new headcount"],
+    href: "/it-solutions/ai-automation",
   },
   {
     id: "internal-platforms",
@@ -721,15 +722,15 @@ export const techOfferings: FullService[] = [
     description: "Custom dashboards, admin panels, and operational tools built around how your team actually works — not a generic template.",
     process: ["Ops mapping with your team", "Dashboard & tool design", "Build & role-based access", "Rollout & team training"],
     results: ["One system instead of five spreadsheets", "Real-time visibility for leadership", "Faster decisions with live operational data"],
-    href: "/technology/internal-platforms",
+    href: "/it-solutions/internal-platforms",
   },
   {
     id: "client-solutions",
     icon: "network",
-    name: "Client Tech Solutions — ERP, CRM & HRMS",
-    description: "End-to-end business automation — ERP, CRM, and HRMS systems built or integrated around your business, so every department runs on one connected platform.",
-    process: ["Business process audit", "System architecture & module selection", "Custom build or integration", "Migration, training & support"],
+    name: "Custom ERP, CRM & HRMS",
+    description: "End-to-end business automation — custom ERP development, CRM development, and HRMS systems built or integrated around your business, so every department runs on one connected platform.",
+    process: ["Business process audit", "System architecture & module selection", "Custom ERP/CRM build or integration", "Migration, training & support"],
     results: ["Departments unified on one platform", "Manual data entry eliminated", "Full visibility from sales to HR to finance"],
-    href: "/technology/client-solutions",
+    href: "/it-solutions/client-solutions",
   },
 ];

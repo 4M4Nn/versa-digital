@@ -114,15 +114,15 @@ export default function ServicesPage() {
                 <Cpu className="size-6 text-violet-light" />
               </div>
               <div>
-                <h2 className="font-heading text-lg font-bold text-white">Also building your technology?</h2>
-                <p className="mt-1 text-sm text-white/60">SaaS, AI automation, internal platforms, ERP/CRM/HRMS — explore our Technology portal.</p>
+                <h2 className="font-heading text-lg font-bold text-white">Also need IT solutions?</h2>
+                <p className="mt-1 text-sm text-white/60">SaaS, AI automation, agentic AI, internal platforms, custom ERP/CRM/HRMS — explore our IT Solutions portal.</p>
               </div>
             </div>
             <Link
-              href="/technology"
+              href="/it-solutions"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-violet-light"
             >
-              Explore Technology <ArrowRight className="size-4" />
+              Explore IT Solutions <ArrowRight className="size-4" />
             </Link>
           </div>
         </Reveal>

@@ -126,14 +126,14 @@ export default function WebDevelopmentPage() {
             <div>
               <h2 className="font-heading text-lg font-bold text-text-dark">Need more than a website?</h2>
               <p className="mt-1 text-sm text-text-muted">
-                For SaaS products, internal tools, or full business systems, see our Technology portal.
+                For SaaS products, internal tools, or full business systems, see our IT Solutions portal.
               </p>
             </div>
             <Link
-              href="/technology"
+              href="/it-solutions"
               className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-violet px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-violet-light"
             >
-              Explore Technology <ArrowRight className="size-4" />
+              Explore IT Solutions <ArrowRight className="size-4" />
             </Link>
           </div>
         </Reveal>

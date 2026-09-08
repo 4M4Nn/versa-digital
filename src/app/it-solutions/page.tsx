@@ -8,9 +8,9 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Technology Products & Business Automation",
+  title: "IT Solutions — AI Automation, Custom ERP & CRM",
   description:
-    "Versa Digital's Technology portal builds SaaS & EdTech products, AI agents & automation, internal platforms, and ERP/CRM/HRMS systems — end-to-end business automation from Kochi, Kerala.",
+    "Versa Digital & IT Solutions builds SaaS & EdTech products, AI automation and agentic AI projects, internal platforms, and custom ERP/CRM/HRMS systems — end-to-end IT solutions from Kochi, Kerala.",
 };
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -20,36 +20,37 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   network: Network,
 };
 
-export default function TechnologyPage() {
+export default function ItSolutionsPage() {
   return (
     <div>
       <ServiceSchema
-        name="Technology Products & Business Automation"
-        description="SaaS & EdTech product builds, AI agents & automation, internal platforms, and ERP/CRM/HRMS systems delivered end-to-end by Versa Digital."
-        serviceType="Software Development & Business Automation"
-        url="/technology"
+        name="IT Solutions — AI Automation, Custom ERP & CRM"
+        description="SaaS & EdTech product builds, AI automation and agentic AI projects, internal platforms, and custom ERP/CRM/HRMS systems delivered end-to-end by Versa Digital & IT Solutions."
+        serviceType="IT Solutions & Business Automation"
+        url="/it-solutions"
       />
 
       <PageHero
-        label="/ TECHNOLOGY"
-        heading="Technology that runs your business."
-        subtext="SaaS products, AI automation, internal platforms, and full ERP/CRM/HRMS systems — built end-to-end, so your business runs on one connected stack instead of a dozen disconnected tools."
+        label="/ IT SOLUTIONS"
+        heading="IT Solutions that run your business."
+        subtext="SaaS products, AI automation and agentic AI, internal platforms, and full custom ERP/CRM/HRMS systems — built end-to-end, so your business runs on one connected stack instead of a dozen disconnected tools."
       />
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <Reveal>
             <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
-              Marketing gets you found. Technology makes you run.
+              Marketing gets you found. IT Solutions makes you run.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-text-muted md:text-lg">
               Most businesses we work with hit the same wall after their marketing starts working:
               the leads and orders arrive faster than their spreadsheets, WhatsApp threads, and
-              disconnected software can handle. Our Technology portal exists to close that gap —
-              custom software built or integrated around how your business actually operates, not
-              a generic off-the-shelf template you have to bend your process around.
+              disconnected software can handle. Our IT Solutions portal exists to close that gap —
+              custom software, AI automation and agentic AI built or integrated around how your
+              business actually operates, not a generic off-the-shelf template you have to bend
+              your process around.
             </p>
           </Reveal>
         </div>

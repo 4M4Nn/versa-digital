@@ -19,7 +19,7 @@ export default function SignatureSection() {
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet-light">
-            / STRATEGIZE. CREATE. SCALE.
+            / IDEAS. SOLUTIONS. GROWTH.
           </span>
         </Reveal>
         <Reveal delay={0.1}>

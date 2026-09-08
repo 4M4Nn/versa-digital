@@ -8,7 +8,7 @@ import { founders, siteConfig } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Versa Digital is part of Versa Growth Ventures — Kerala's first AEO-driven digital services and technology company, spanning marketing and full business automation.",
+    "Versa Digital & IT Solutions is part of Versa Growth Ventures — Kerala's first AEO-driven digital services and IT solutions company, spanning marketing, AI automation and full business automation.",
 };
 
 const VALUES = [
@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <div>
       <PageHero
-        label="/ ABOUT VERSA DIGITAL"
+        label="/ ABOUT VERSA DIGITAL & IT SOLUTIONS"
         heading="We build digital brands that perform."
         subtext={`Part of ${siteConfig.partOf} — Kerala's first AEO management agency.`}
       />
@@ -50,10 +50,10 @@ export default function AboutPage() {
             <p className="mt-5 text-base leading-relaxed text-text-muted md:text-lg">
               That same discipline led us further: the same businesses asking us to build their
               brand were also running on spreadsheets, disconnected tools, and manual processes.
-              So Versa Digital now operates as two portals under one roof — Digital Services, for
-              everything that grows your brand and pipeline, and Technology, for the SaaS
-              products, AI automation, and ERP/CRM/HRMS systems that run your business day to
-              day.
+              So we became Versa Digital &amp; IT Solutions — two portals under one roof. Digital
+              Services grows your brand and pipeline. IT Solutions builds the SaaS products, AI
+              automation and agentic AI projects, and custom ERP, CRM and HRMS systems that run
+              your business day to day.
             </p>
           </Reveal>
 

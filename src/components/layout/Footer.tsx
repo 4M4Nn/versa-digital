@@ -21,10 +21,10 @@ const serviceLinks = [
 ];
 
 const techLinks = [
-  { label: "SaaS & EdTech", href: "/technology/saas-edtech" },
-  { label: "AI & Automation", href: "/technology/ai-automation" },
-  { label: "Internal Platforms", href: "/technology/internal-platforms" },
-  { label: "ERP, CRM & HRMS", href: "/technology/client-solutions" },
+  { label: "SaaS & EdTech", href: "/it-solutions/saas-edtech" },
+  { label: "AI & Automation", href: "/it-solutions/ai-automation" },
+  { label: "Internal Platforms", href: "/it-solutions/internal-platforms" },
+  { label: "ERP, CRM & HRMS", href: "/it-solutions/client-solutions" },
 ];
 
 const quickLinks = [
@@ -51,7 +51,9 @@ export default function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center gap-2.5">
             <Logo size={38} onDark />
-            <span className="font-heading text-base font-bold tracking-wide">VERSA DIGITAL</span>
+            <span className="font-heading text-base font-bold tracking-wide">
+              VERSA DIGITAL <span className="font-medium normal-case tracking-normal text-white/50">& IT Solutions</span>
+            </span>
           </Link>
           <p className="mt-3 text-sm text-white/60">{siteConfig.tagline}</p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/50">
@@ -90,7 +92,7 @@ export default function Footer() {
 
         <div>
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-violet-light">
-            Technology
+            IT Solutions
           </h4>
           <ul className="mt-4 space-y-2.5">
             {techLinks.map((link) => (

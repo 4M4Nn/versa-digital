@@ -18,9 +18,9 @@ import GoldDivider from "@/components/shared/GoldDivider";
 import { services, siteConfig, portals } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Versa Digital — Digital Services & Technology, Kerala",
+  title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
   description:
-    "Kerala's first AEO-driven digital services and technology company. Performance marketing, SEO/AEO, social media & web development — plus SaaS, AI automation and ERP/CRM/HRMS builds. Kochi, Kerala.",
+    "Kerala's first AEO-driven digital services and IT solutions company. Performance marketing, SEO/AEO, social media & web development — plus AI automation, agentic AI, custom ERP & CRM development. Kochi, Kerala.",
 };
 
 const TICKER_ITEMS = [
@@ -30,8 +30,9 @@ const TICKER_ITEMS = [
   "META ADS",
   "WEB DEVELOPMENT",
   "AI AUTOMATION",
+  "AGENTIC AI",
+  "CUSTOM ERP & CRM",
   "SAAS & EDTECH",
-  "ERP / CRM / HRMS",
   "PERFORMANCE MARKETING",
   "KERALA'S FIRST AEO AGENCY",
 ];
@@ -65,7 +66,8 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: siteConfig.name,
+            name: siteConfig.fullName,
+            alternateName: siteConfig.name,
             description: siteConfig.positioning,
             url: "https://www.versadigital.in",
             telephone: siteConfig.phone,

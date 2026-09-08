@@ -10,9 +10,9 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "ERP, CRM & HRMS — Full Business Automation",
+  title: "Custom ERP & CRM Development, HRMS",
   description:
-    "End-to-end ERP, CRM, and HRMS systems built or integrated around your business — unifying sales, finance, operations, and HR on one platform. Versa Digital, Kochi.",
+    "Custom ERP development, CRM development, and HRMS systems built or integrated around your business — unifying sales, finance, operations, and HR on one platform. Versa Digital & IT Solutions, Kochi.",
 };
 
 const service = techOfferings.find((o) => o.id === "client-solutions")!;
@@ -28,15 +28,15 @@ export default function ClientSolutionsPage() {
   return (
     <div>
       <ServiceSchema
-        name="ERP, CRM & HRMS — Client Tech Solutions"
+        name="Custom ERP & CRM Development, HRMS"
         description={service.description}
-        serviceType="Enterprise Software & Business Automation"
-        url="/technology/client-solutions"
+        serviceType="Custom ERP and CRM Development"
+        url="/it-solutions/client-solutions"
       />
 
       <PageHero
-        label="/ CLIENT TECH SOLUTIONS"
-        heading="ERP, CRM & HRMS — full business automation."
+        label="/ CUSTOM ERP & CRM"
+        heading="Custom ERP, CRM & HRMS — full business automation."
         subtext="End-to-end systems that connect sales, finance, operations, and HR into one platform, built or integrated around how your business actually runs."
       />
 
@@ -129,11 +129,11 @@ export default function ClientSolutionsPage() {
             <p className="text-sm font-semibold uppercase tracking-wider text-violet">Pairs well with</p>
             <p className="mt-2 text-text-muted">
               Full automation projects usually start with{" "}
-              <Link href="/technology/internal-platforms" className="font-semibold text-violet hover:text-violet-light">
+              <Link href="/it-solutions/internal-platforms" className="font-semibold text-violet hover:text-violet-light">
                 Internal Platforms
               </Link>{" "}
               for a specific team, then expand company-wide, with{" "}
-              <Link href="/technology/ai-automation" className="font-semibold text-violet hover:text-violet-light">
+              <Link href="/it-solutions/ai-automation" className="font-semibold text-violet hover:text-violet-light">
                 AI & Automation
               </Link>{" "}
               layered in to remove manual work across every module.

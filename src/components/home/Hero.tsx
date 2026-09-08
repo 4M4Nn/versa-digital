@@ -38,7 +38,7 @@ export default function Hero() {
         <div>
           <Reveal>
             <span className="inline-block font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
-              DIGITAL SERVICES & TECHNOLOGY
+              DIGITAL SERVICES & IT SOLUTIONS
             </span>
           </Reveal>
 

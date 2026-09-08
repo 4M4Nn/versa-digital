@@ -17,7 +17,7 @@ export default function TwoPortalsSection() {
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-4 font-heading text-4xl font-extrabold text-white md:text-5xl">
-              Digital Services & Technology.
+              Digital Services & IT Solutions.
             </h2>
           </Reveal>
           <Reveal delay={0.2}>

@@ -38,11 +38,11 @@ const siteUrl = "https://www.versadigital.in";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Versa Digital — Digital Services & Technology, Kerala",
+    default: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Kerala's first AEO-driven digital services and technology company. Performance marketing, SEO/AEO, social media, web development and lead generation — plus SaaS, AI automation, and ERP/CRM/HRMS builds. Kochi, Kerala.",
+    "Kerala's first AEO-driven digital services and IT solutions company. Performance marketing, SEO/AEO, social media, web development and lead generation — plus AI automation, agentic AI projects, custom ERP & CRM development. Kochi, Kerala.",
   keywords: [
     "Digital marketing Kerala",
     "AEO agency Kerala",
@@ -51,11 +51,17 @@ export const metadata: Metadata = {
     "social media marketing Kerala",
     "AI marketing agency",
     "web development Kerala",
+    "IT solutions Kerala",
+    "IT solutions company Kochi",
     "AI automation company Kerala",
+    "agentic AI projects",
+    "AI agentic development",
+    "custom ERP development Kerala",
+    "CRM development Kerala",
     "ERP CRM HRMS Kerala",
     "SaaS development Kochi",
-    "technology company Kochi",
     "Versa Digital",
+    "Versa Digital IT Solutions",
   ],
   authors: [{ name: siteConfig.name }],
   openGraph: {
@@ -63,15 +69,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: siteConfig.name,
-    title: "Versa Digital — Digital Services & Technology, Kerala",
+    title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
     description:
-      "Kerala's first AEO-driven digital services and technology company. Digital marketing that scales your brand, and technology that automates your business — ERP, CRM, HRMS, AI agents and SaaS products.",
-    images: [{ url: "/logo.jpg", width: 1254, height: 1254, alt: siteConfig.name }],
+      "Kerala's first AEO-driven digital services and IT solutions company. Digital marketing that scales your brand, and IT solutions that run your business — custom ERP, CRM, AI automation, agentic AI and SaaS products.",
+    images: [{ url: "/logo.jpg", width: 1254, height: 1254, alt: siteConfig.fullName }],
   },
   twitter: {
     card: "summary",
-    title: "Versa Digital — Digital Services & Technology, Kerala",
-    description: "AI-powered digital marketing and full business technology — SEO/AEO, ads, content, SaaS, AI automation, and ERP/CRM/HRMS.",
+    title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
+    description: "AI-powered digital marketing and full IT solutions — SEO/AEO, ads, content, AI automation, agentic AI, custom ERP & CRM.",
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },

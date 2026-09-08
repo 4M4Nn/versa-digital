@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Layers, Rocket, ShieldCheck, BarChart3 } from "lucide-react";
+import { Check, LayoutDashboard, Users, Eye, Zap } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
@@ -10,57 +10,58 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "SaaS & EdTech Product Development",
+  title: "Internal Platforms & Custom Dashboards",
   description:
-    "End-to-end SaaS and EdTech product builds — from MVP to a scalable, multi-tenant platform with subscription billing and analytics. Built by Versa Digital, Kochi.",
+    "Custom dashboards, admin panels, and operational tools built around how your team actually works — replacing spreadsheets with real-time visibility. Versa Digital, Kochi.",
 };
 
-const service = techOfferings.find((o) => o.id === "saas-edtech")!;
+const service = techOfferings.find((o) => o.id === "internal-platforms")!;
 
 const WHY_ITEMS = [
-  { icon: Rocket, title: "MVP to Market, Fast", description: "A working, sellable product in weeks — built to validate demand, not sit in development for a year." },
-  { icon: Layers, title: "Multi-Tenant From Day One", description: "Architecture built to serve hundreds of customers on one codebase, not rebuilt later when you scale." },
-  { icon: ShieldCheck, title: "Billing & Access Built In", description: "Subscription billing, role-based access, and usage limits wired in — not bolted on after launch." },
-  { icon: BarChart3, title: "Analytics From Launch", description: "Product usage and business metrics tracked from day one, so you know what's working." },
+  { icon: LayoutDashboard, title: "Built Around Your Workflow", description: "Not a generic template — a tool designed around how your specific team actually operates day to day." },
+  { icon: Users, title: "Role-Based Access", description: "Every team member sees exactly what they need and nothing they don't, from field staff to leadership." },
+  { icon: Eye, title: "Real-Time Visibility", description: "Leadership sees live operational data instead of waiting for a weekly report someone had to compile by hand." },
+  { icon: Zap, title: "Faster Decisions", description: "One connected system replaces the spreadsheets and group chats that used to slow decisions down." },
 ];
 
-export default function SaasEdtechPage() {
+export default function InternalPlatformsPage() {
   return (
     <div>
       <ServiceSchema
-        name="SaaS & EdTech Product Development"
+        name="Internal Platforms & Custom Dashboards"
         description={service.description}
-        serviceType="Software Product Development"
-        url="/technology/saas-edtech"
+        serviceType="Internal Business Software Development"
+        url="/it-solutions/internal-platforms"
       />
 
       <PageHero
-        label="/ SAAS & EDTECH"
-        heading="Your product, built to scale from day one."
-        subtext="End-to-end SaaS and EdTech product builds — from first prototype to a multi-tenant platform your customers pay for every month."
+        label="/ INTERNAL PLATFORMS"
+        heading="One system instead of five spreadsheets."
+        subtext="Custom dashboards and internal tools built around how your team actually works — not a generic template you have to adapt to."
       />
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-4xl">
           <Reveal>
             <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
-              What we actually build
+              What an internal platform actually replaces
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-5 text-base leading-relaxed text-text-muted">
-              Whether you&apos;re a software business building your first product or an education
-              provider turning offline courses into a learning platform, the underlying
-              engineering problem is the same: a system that serves many customers or students
-              from one codebase, keeps their data cleanly separated, and can bill them
-              automatically every month without you chasing a single invoice.
+              Most growing businesses end up running on a patchwork: one spreadsheet for
+              inventory, another for staff schedules, a WhatsApp group for updates, and a
+              founder who&apos;s the only one who actually knows the full picture. An internal
+              platform replaces that patchwork with a single tool built specifically around your
+              operations — inventory, scheduling, orders, approvals, whatever your business
+              actually runs on.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-3 text-base leading-relaxed text-text-muted">
-              We build on modern, production-proven frameworks — the same stack this site itself
-              runs on — so what ships isn&apos;t a fragile prototype, but a product ready for real
-              users and real payments from launch day.
+              Because it&apos;s built for your team specifically — not configured from a generic SaaS
+              template — it fits the way you already work, rather than forcing your team to
+              adapt to someone else&apos;s assumptions about how a business like yours should run.
             </p>
           </Reveal>
         </div>
@@ -91,7 +92,7 @@ export default function SaasEdtechPage() {
         <div className="mx-auto max-w-5xl">
           <Reveal>
             <h2 className="text-center font-heading text-3xl font-extrabold text-white md:text-4xl">
-              Our product build process
+              Our build process
             </h2>
           </Reveal>
           <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2">
@@ -125,15 +126,15 @@ export default function SaasEdtechPage() {
           <div className="mx-auto max-w-4xl rounded-3xl border border-violet/15 bg-white p-8 text-center shadow-sm md:p-10">
             <p className="text-sm font-semibold uppercase tracking-wider text-violet">Pairs well with</p>
             <p className="mt-2 text-text-muted">
-              Once your product is live, our{" "}
-              <Link href="/technology/ai-automation" className="font-semibold text-violet hover:text-violet-light">
+              Internal Platforms often grow into a full{" "}
+              <Link href="/it-solutions/client-solutions" className="font-semibold text-violet hover:text-violet-light">
+                ERP, CRM or HRMS
+              </Link>{" "}
+              build, and pair naturally with{" "}
+              <Link href="/it-solutions/ai-automation" className="font-semibold text-violet hover:text-violet-light">
                 AI & Automation
               </Link>{" "}
-              team can build onboarding and support agents, and{" "}
-              <Link href="/services/lead-generation" className="font-semibold text-violet hover:text-violet-light">
-                Lead Generation
-              </Link>{" "}
-              can start filling your funnel from day one.
+              to remove manual data entry entirely.
             </p>
           </div>
         </Reveal>
@@ -142,19 +143,19 @@ export default function SaasEdtechPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 text-center md:px-8">
         <Reveal>
           <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
-            Have a product idea?
+            Still running operations on spreadsheets?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-text-muted">
-            Tell us what you&apos;re building — we&apos;ll give you an honest read on scope, timeline,
-            and what an MVP would actually take.
+            Tell us how your team currently tracks its work — we&apos;ll show you what a purpose-built
+            platform would look like.
           </p>
           <MagneticButton
-            href={whatsappUrl("Hi Versa Digital, I'd like to discuss a SaaS/EdTech product build.")}
+            href={whatsappUrl("Hi Versa Digital, I'd like to discuss an internal platform for my business.")}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-7 min-h-12 rounded-full bg-violet px-8 text-sm font-semibold text-white hover:bg-violet-light"
           >
-            Discuss Your Product
+            Discuss Your Platform
           </MagneticButton>
         </Reveal>
       </section>

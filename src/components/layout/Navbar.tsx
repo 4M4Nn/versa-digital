@@ -74,6 +74,15 @@ export default function Navbar() {
               )}
             >
               VERSA DIGITAL
+              <span
+                className={cn(
+                  "hidden font-medium normal-case tracking-normal xl:inline",
+                  dark ? "text-white/50" : "text-text-muted"
+                )}
+              >
+                {" "}
+                & IT Solutions
+              </span>
             </span>
           </Link>
 

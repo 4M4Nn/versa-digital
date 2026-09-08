@@ -5,7 +5,7 @@ import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { whyPillars } from "@/lib/data";
 
-const POSTURE_LINES = ["Strategize.", "Create.", "Scale."];
+const POSTURE_LINES = ["Ideas.", "Solutions.", "Growth."];
 
 export default function WhyUsSection() {
   return (

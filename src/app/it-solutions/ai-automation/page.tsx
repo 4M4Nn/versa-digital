@@ -10,9 +10,9 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "AI Agents & Business Automation",
+  title: "AI Automation & Agentic AI Projects",
   description:
-    "Custom AI agents, chatbots, and workflow automation that remove repetitive work from sales, support, and operations. Built and monitored by Versa Digital, Kochi.",
+    "Custom AI agents, agentic AI projects, chatbots, and workflow automation that remove repetitive work from sales, support, and operations. Built and monitored by Versa Digital & IT Solutions, Kochi.",
 };
 
 const service = techOfferings.find((o) => o.id === "ai-automation")!;
@@ -28,16 +28,16 @@ export default function AiAutomationPage() {
   return (
     <div>
       <ServiceSchema
-        name="AI Agents & Business Automation"
+        name="AI Automation & Agentic AI Projects"
         description={service.description}
-        serviceType="AI Automation Consulting & Development"
-        url="/technology/ai-automation"
+        serviceType="AI Automation & Agentic AI Development"
+        url="/it-solutions/ai-automation"
       />
 
       <PageHero
-        label="/ AI & AUTOMATION"
+        label="/ AI AUTOMATION & AGENTIC AI"
         heading="Let AI handle the repetitive work."
-        subtext="Custom AI agents and workflow automation that remove manual, repetitive tasks from sales, support, and operations — without removing your team's judgment."
+        subtext="Custom AI agents, agentic AI projects, and workflow automation that remove manual, repetitive tasks from sales, support, and operations — without removing your team's judgment."
       />
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
@@ -63,6 +63,15 @@ export default function AiAutomationPage() {
               escalation to a human whenever the AI shouldn&apos;t be making the call alone. The same
               principle we apply to AI-assisted content production for our marketing clients:
               AI accelerates the work, people stay in control of quality and judgment.
+            </p>
+          </Reveal>
+          <Reveal delay={0.3}>
+            <p className="mt-3 text-base leading-relaxed text-text-muted">
+              For businesses ready to go further, we also build agentic AI projects — AI agents
+              that don&apos;t just answer a question but carry out a multi-step task on their own:
+              checking stock, updating a CRM record, drafting and sending a follow-up, or
+              escalating to a human only when a decision genuinely needs one. It&apos;s the
+              difference between a chatbot that talks and an agent that actually gets work done.
             </p>
           </Reveal>
         </div>
@@ -128,11 +137,11 @@ export default function AiAutomationPage() {
             <p className="text-sm font-semibold uppercase tracking-wider text-violet">Pairs well with</p>
             <p className="mt-2 text-text-muted">
               AI & Automation connects naturally with{" "}
-              <Link href="/technology/internal-platforms" className="font-semibold text-violet hover:text-violet-light">
+              <Link href="/it-solutions/internal-platforms" className="font-semibold text-violet hover:text-violet-light">
                 Internal Platforms
               </Link>{" "}
               and{" "}
-              <Link href="/technology/client-solutions" className="font-semibold text-violet hover:text-violet-light">
+              <Link href="/it-solutions/client-solutions" className="font-semibold text-violet hover:text-violet-light">
                 ERP, CRM & HRMS
               </Link>{" "}
               — the same integrations that power an AI agent usually power your other systems too.

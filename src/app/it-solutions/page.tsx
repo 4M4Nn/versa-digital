@@ -5,7 +5,7 @@ import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 import { whatsappUrl } from "@/lib/whatsapp";
-import { techOfferings } from "@/lib/data";
+import { techOfferings, itStats } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "IT Solutions — AI Automation, Custom ERP & CRM",
@@ -54,6 +54,19 @@ export default function ItSolutionsPage() {
             </p>
           </Reveal>
         </div>
+
+        <Reveal delay={0.15}>
+          <div className="mx-auto mt-14 grid max-w-3xl grid-cols-3 gap-4 rounded-3xl border border-violet/15 bg-violet-pale px-4 py-8 text-center md:gap-8 md:px-10">
+            {itStats.map((stat) => (
+              <div key={stat.label}>
+                <span className="font-heading text-3xl font-extrabold text-violet md:text-5xl">{stat.value}</span>
+                <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-wide text-text-muted md:text-xs">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-24">

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.fullName}`,
   },
   description:
     "Kerala's first AEO-driven digital services and IT solutions company. Performance marketing, SEO/AEO, social media, web development and lead generation — plus AI automation, agentic AI projects, custom ERP & CRM development. Kochi, Kerala.",
@@ -63,12 +63,12 @@ export const metadata: Metadata = {
     "Versa Digital",
     "Versa Digital IT Solutions",
   ],
-  authors: [{ name: siteConfig.name }],
+  authors: [{ name: siteConfig.fullName }],
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: siteUrl,
-    siteName: siteConfig.name,
+    siteName: siteConfig.fullName,
     title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
     description:
       "Kerala's first AEO-driven digital services and IT solutions company. Digital marketing that scales your brand, and IT solutions that run your business — custom ERP, CRM, AI automation, agentic AI and SaaS products.",

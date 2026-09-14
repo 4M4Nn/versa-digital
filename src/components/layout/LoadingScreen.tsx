@@ -96,7 +96,7 @@ export default function LoadingScreen() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="flex size-20 items-center justify-center rounded-2xl bg-white p-2 shadow-2xl"
           >
-            <Image src="/logo.jpg" alt="Versa Digital" width={64} height={64} className="rounded-xl" priority />
+            <Image src="/logo.jpg" alt={siteConfig.fullName} width={64} height={64} className="rounded-xl" priority />
           </motion.div>
 
           <div className="flex gap-[2px] font-heading text-2xl font-bold tracking-[0.15em] text-white sm:text-3xl">

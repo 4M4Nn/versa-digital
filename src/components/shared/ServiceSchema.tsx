@@ -29,7 +29,7 @@ export default function ServiceSchema({
           areaServed,
           provider: {
             "@type": "Organization",
-            name: siteConfig.name,
+            name: siteConfig.fullName,
             url: SITE_URL,
             telephone: siteConfig.phone,
             email: siteConfig.email,

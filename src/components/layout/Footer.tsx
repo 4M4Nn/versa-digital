@@ -145,7 +145,7 @@ export default function Footer() {
       <div className="mx-auto mt-12 max-w-7xl border-t border-white/10 pt-6">
         <div className="flex flex-col items-center gap-2 text-center text-xs text-white/40 sm:flex-row sm:justify-between sm:text-left">
           <p>
-            &copy; {new Date().getFullYear()} Versa Digital | Part of {siteConfig.partOf}
+            &copy; {new Date().getFullYear()} {siteConfig.fullName} | Part of {siteConfig.partOf}
           </p>
           <p>Built by Loopgen Technologies</p>
         </div>

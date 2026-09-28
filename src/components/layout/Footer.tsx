@@ -135,6 +135,11 @@ export default function Footer() {
                 <Mail className="size-4 shrink-0 text-violet-light" /> {siteConfig.email}
               </a>
             </li>
+            <li>
+              <a href={`mailto:${siteConfig.businessEmail}`} className="flex items-center gap-2.5 text-sm text-white/60 hover:text-white">
+                <Mail className="size-4 shrink-0 text-violet-light" /> {siteConfig.businessEmail}
+              </a>
+            </li>
             <li className="flex items-start gap-2.5 text-sm text-white/60">
               <MapPin className="mt-0.5 size-4 shrink-0 text-violet-light" /> {siteConfig.address}
             </li>

@@ -32,6 +32,9 @@ export default function ContactSection() {
               <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 text-text-dark hover:text-violet">
                 <Mail className="size-5 text-violet" /> {siteConfig.email}
               </a>
+              <a href={`mailto:${siteConfig.businessEmail}`} className="flex items-center gap-3 text-text-dark hover:text-violet">
+                <Mail className="size-5 text-violet" /> {siteConfig.businessEmail}
+              </a>
               <div className="flex items-start gap-3 text-text-dark">
                 <MapPin className="mt-0.5 size-5 shrink-0 text-violet" /> {siteConfig.address}
               </div>

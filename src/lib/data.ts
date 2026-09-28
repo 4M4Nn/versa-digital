@@ -23,6 +23,7 @@ export const siteConfig = {
   phoneHref: "+919746733133",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919746733133",
   email: "versadigital26@gmail.com",
+  businessEmail: "info@versagrowthventures.in",
   website: "www.versadigital.in",
   address: "Versa Growth Ventures, 3rd Floor, Jogeo Building, Chembumukku, Kakkanad, Kochi, Kerala 682021, India",
   mapQuery: "Jogeo Building, Chembumukku, Kakkanad, Kochi, Kerala 682021",

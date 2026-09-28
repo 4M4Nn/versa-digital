@@ -6,6 +6,7 @@ import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { founders, siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About Us",
   description:
     "Versa Digital & IT Solutions is part of Versa Growth Ventures — Kerala's first AEO-driven digital services and IT solutions company, spanning marketing, AI automation and full business automation.",

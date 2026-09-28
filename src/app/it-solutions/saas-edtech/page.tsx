@@ -10,6 +10,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/it-solutions/saas-edtech" },
   title: "SaaS & EdTech Product Development",
   description:
     "End-to-end SaaS and EdTech product builds — from MVP to a scalable, multi-tenant platform with subscription billing and analytics. Built by Versa Digital, Kochi.",

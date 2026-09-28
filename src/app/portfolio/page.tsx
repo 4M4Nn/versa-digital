@@ -7,6 +7,7 @@ import { caseStudies } from "@/lib/data";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/portfolio" },
   title: "Portfolio & Case Studies",
   description:
     "Real results from real Kerala businesses — IPB Kochi, Brew & Bloom Coffee, and Future Optima IT share their growth with Versa Digital.",

@@ -8,6 +8,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { growthPackages, faqs } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/packages" },
   title: "Packages & Pricing",
   description:
     "Versa Digital's Digital Growth Plans and SEO packages — transparent pricing from ₹2,999/month for SEO to ₹50,000/month for complete digital marketing.",

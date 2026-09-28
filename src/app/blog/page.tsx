@@ -7,8 +7,10 @@ import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { blogPosts } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog",
-  description: "Insights on AEO, AI marketing, and performance advertising from the Versa Digital team.",
+  description:
+    "Insights on AEO, GEO, SEO, AI marketing, performance advertising, WhatsApp automation, AI agents and custom ERP from the Versa Digital & IT Solutions team in Kochi, Kerala.",
 };
 
 export default function BlogPage() {

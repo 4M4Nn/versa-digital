@@ -3,6 +3,7 @@ import PageHero from "@/components/shared/PageHero";
 import ContactSection from "@/components/home/ContactSection";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: "Book a free strategy call with Versa Digital. Call, WhatsApp, or fill out our contact form.",
 };

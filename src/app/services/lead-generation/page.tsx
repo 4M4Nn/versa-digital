@@ -9,6 +9,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/lead-generation" },
   title: "Lead Generation — Funnels That Convert",
   description:
     "Landing pages, funnels, and campaigns engineered to turn traffic into qualified leads in your CRM or WhatsApp. Versa Digital's lead generation service, Kochi.",

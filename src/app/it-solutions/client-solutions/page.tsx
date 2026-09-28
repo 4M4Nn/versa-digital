@@ -10,6 +10,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/it-solutions/client-solutions" },
   title: "Custom ERP & CRM Development, HRMS",
   description:
     "Custom ERP development, CRM development, and HRMS systems built or integrated around your business — unifying sales, finance, operations, and HR on one platform. Versa Digital & IT Solutions, Kochi.",

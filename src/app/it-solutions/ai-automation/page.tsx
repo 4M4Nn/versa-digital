@@ -10,6 +10,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/it-solutions/ai-automation" },
   title: "AI Automation & Agentic AI Projects",
   description:
     "Custom AI agents, agentic AI projects, chatbots, and workflow automation that remove repetitive work from sales, support, and operations. Built and monitored by Versa Digital & IT Solutions, Kochi.",

@@ -5,12 +5,13 @@ import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
 import ServiceSchema from "@/components/shared/ServiceSchema";
 import { whatsappUrl } from "@/lib/whatsapp";
-import { techOfferings, itStats } from "@/lib/data";
+import { techOfferings, itStats, itStatsLabel } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/it-solutions" },
   title: "IT Solutions — AI Automation, Custom ERP & CRM",
   description:
-    "Versa Digital & IT Solutions builds SaaS & EdTech products, AI automation and agentic AI projects, internal platforms, and custom ERP/CRM/HRMS systems — end-to-end IT solutions from Kochi, Kerala.",
+    "Live ERP, CRM and automation projects in production. Versa Digital & IT Solutions builds SaaS & EdTech products, AI automation and agentic AI projects, internal platforms, and custom ERP/CRM/HRMS systems — end-to-end IT solutions from Kochi, Kerala.",
 };
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -56,7 +57,10 @@ export default function ItSolutionsPage() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="mx-auto mt-14 grid max-w-3xl grid-cols-3 gap-4 rounded-3xl border border-violet/15 bg-violet-pale px-4 py-8 text-center md:gap-8 md:px-10">
+          <p className="mx-auto mt-14 text-center font-mono text-xs font-semibold uppercase tracking-[0.2em] text-violet">
+            {itStatsLabel}
+          </p>
+          <div className="mx-auto mt-4 grid max-w-4xl grid-cols-2 gap-x-4 gap-y-8 rounded-3xl border border-violet/15 bg-violet-pale px-4 py-8 text-center md:grid-cols-4 md:gap-8 md:px-10">
             {itStats.map((stat) => (
               <div key={stat.label}>
                 <span className="font-heading text-3xl font-extrabold text-violet md:text-5xl">{stat.value}</span>

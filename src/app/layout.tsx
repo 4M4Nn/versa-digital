@@ -79,7 +79,6 @@ export const metadata: Metadata = {
     title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
     description: "AI-powered digital marketing and full IT solutions — SEO/AEO, ads, content, AI automation, agentic AI, custom ERP & CRM.",
   },
-  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   icons: {
     icon: [

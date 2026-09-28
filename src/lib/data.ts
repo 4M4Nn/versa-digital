@@ -401,6 +401,135 @@ export const founders: Founder[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "seo-vs-aeo-vs-geo-where-kerala-businesses-should-start",
+    title: "SEO vs AEO vs GEO: Where Should a Kerala Business Start in 2026?",
+    excerpt:
+      "Three acronyms, one budget. Here's what SEO, AEO, and GEO each actually do, how they overlap, and which one a Kerala business should fund first.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    category: "AEO",
+    date: "September 2026",
+    publishedAt: "2026-09-29",
+    author: "Versa Digital Team",
+    keywords: ["SEO vs AEO", "what is GEO", "generative engine optimization Kerala", "AEO agency Kochi", "AI search optimization"],
+    body: [
+      "Short answer: SEO gets you ranked in Google's results, AEO gets you quoted as the direct answer by tools like ChatGPT, Perplexity, and Google's AI Overviews, and GEO (Generative Engine Optimization) is a newer name for broadly the same goal as AEO — being cited inside AI-generated answers. For most Kerala businesses, the right order is a clean SEO foundation first, with AEO built on top of it straight away, because most of the work is shared.",
+      "## What does each one actually optimize for?",
+      "SEO (Search Engine Optimization) optimizes for a ranked list of links. Success means appearing on page one for the phrases your customers type, and earning the click. AEO (Answer Engine Optimization) optimizes for a single synthesized answer. Success means an AI tool naming your business, or quoting your content, when someone asks a question like 'which agency in Kochi does AEO'. GEO is the term many researchers and tool vendors use for optimizing specifically for large language model answers — in day-to-day practice, the tactics are the same ones we group under AEO.",
+      "## Why do they overlap so much?",
+      "Because AI answer engines still depend on the open web. They crawl pages, read structured data, and cross-check facts across sources before they commit to an answer. A site that is fast, crawlable, clearly structured, and consistent about who the business is and what it does is easier for Google to rank and easier for an AI model to trust. That's why we never sell AEO as a replacement for SEO — a technically broken site is invisible to both.",
+      "## Where do they genuinely differ?",
+      "The differences are in format and in trust signals. AEO rewards content that answers a question in the first two sentences, then explains. It rewards FAQ and question-led headings, schema markup (Organization, LocalBusiness, FAQPage, Article), and a business description that is word-for-word consistent across your website, Google Business Profile, directories, and social profiles. Traditional SEO tolerates a slow build-up to the point and cares more about links and keyword targeting; AEO punishes vagueness because a model can't quote what it can't extract.",
+      "## So which should a Kerala business fund first?",
+      "If your website is slow, missing basic on-page SEO, or not indexed properly, fix that first — it's the foundation both disciplines stand on, and it's usually a few weeks of work, not months. If the foundation is already reasonable, start AEO immediately rather than waiting, because the first-mover window in Kerala is still open: most local competitors haven't even checked what ChatGPT says about their category. A local service business with a strong Google Business Profile can often see AI tools start naming it within 60–90 days of consistent AEO work.",
+      "## How do you measure AEO when there's no 'ranking'?",
+      "We use a fixed list of real customer questions and re-ask them across ChatGPT, Perplexity, Gemini, and Google's AI Overviews every few weeks, logging whether the business is named, quoted, or linked. Alongside that we track branded search volume and enquiries that mention finding the business through an AI tool. It's less tidy than a rank tracker, but it measures the thing that actually matters: whether the AI recommends you.",
+      "At Versa Digital, every SEO engagement includes AEO foundations by default, and our dedicated AEO service adds the answer-tracking, schema, and cross-platform consistency work on top. If you want to know where your business stands today, we'll run the question-list audit for free and show you exactly what the AI tools say.",
+    ],
+    faqs: [
+      {
+        question: "Is GEO different from AEO?",
+        answer:
+          "Mostly in name. GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) both aim to get your business cited in AI-generated answers. The practical work — question-led content, schema markup, consistent business facts, and trusted third-party mentions — is the same.",
+      },
+      {
+        question: "Can I do AEO without SEO?",
+        answer:
+          "Not effectively. AI answer engines rely on crawlable, well-structured web pages, so a site with poor technical SEO is hard for them to read or trust. Fix the SEO foundation first, then layer AEO on top.",
+      },
+      {
+        question: "How long does AEO take to show results in Kerala?",
+        answer:
+          "For a local business with a solid website and Google Business Profile, AI tools often begin naming it within 60–90 days of consistent AEO work. Competitive categories take longer.",
+      },
+    ],
+  },
+  {
+    slug: "whatsapp-business-api-automation-kerala",
+    title: "WhatsApp Business API Automation: Answering Every Enquiry in Minutes",
+    excerpt:
+      "In Kerala, the enquiry arrives on WhatsApp — and often after hours. Here's how WhatsApp automation and AI agents stop leads going cold without making you sound like a robot.",
+    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=1200&auto=format&fit=crop",
+    category: "AI Automation",
+    date: "September 2026",
+    publishedAt: "2026-09-29",
+    author: "Versa Digital Team",
+    keywords: ["WhatsApp Business API Kerala", "WhatsApp automation Kochi", "WhatsApp chatbot for business", "AI agent WhatsApp", "lead response automation"],
+    body: [
+      "Short answer: the WhatsApp Business API (officially the WhatsApp Business Platform) lets a business connect WhatsApp to its own systems, so an automated flow or AI agent can reply instantly, qualify the enquiry, answer common questions, book appointments, and hand the conversation to a human with full context. For Kerala businesses — where most customers would rather WhatsApp than fill a form — it's usually the single fastest way to stop losing leads to slow replies.",
+      "## What's the difference between the WhatsApp Business app and the API?",
+      "The free WhatsApp Business app runs on one phone (plus linked devices) and supports quick replies, labels, and a basic away message. It's fine for a small shop. The API is built for volume and integration: multiple staff on one number, automated flows, connections to your CRM or booking system, approved message templates for follow-ups, and an official business profile. It is accessed through Meta directly or through an approved Business Solution Provider, and messages are billed by Meta according to its current pricing for your region.",
+      "## What should actually be automated?",
+      "The repetitive first five minutes of most conversations: greeting the customer, asking what they need, collecting name and location, answering the questions every customer asks (price range, timings, location, availability), and offering a slot or a callback. Anything involving a judgment call — a complaint, a custom quote, a sensitive situation — should route to a person. The goal isn't to remove your team from WhatsApp; it's to make sure nobody waits four hours for an answer a system could have given in four seconds.",
+      "## Where do AI agents fit in?",
+      "A rules-based flow follows buttons and menus. An AI agent can read a free-text message like 'do you have anything for a 3-day Munnar trip for six people next month', understand the intent, check your actual inventory or calendar, and reply in natural language — in English or Malayalam. The important part is boundaries: the agent works only from your approved information, never invents prices or policies, and escalates to a human the moment it isn't confident.",
+      "## What does it take to set up?",
+      "Typically: a dedicated phone number not already registered on regular WhatsApp, a verified Meta Business account, a chosen provider, message templates approved by Meta for any business-initiated follow-ups, and a mapped conversation flow. A focused lead-capture and FAQ automation usually takes two to four weeks including testing; integration with a custom CRM or ERP adds time depending on the system.",
+      "## What results are realistic?",
+      "The most reliable win is response time — enquiries answered in seconds instead of hours, including nights and Sundays. Beyond that, businesses usually see cleaner lead data (because the flow collects the same fields every time) and fewer staff hours spent answering identical questions. We don't promise a fixed conversion lift, because it depends on your offer and follow-up — but slow replies are one of the most common reasons we see leads go cold.",
+      "Versa Digital builds WhatsApp automations and AI agents inside our IT Solutions portal, and connects them to the lead-generation campaigns we run on the Digital Services side — so an ad click, a WhatsApp conversation, and a CRM record all line up. If most of your enquiries already arrive on WhatsApp, that's the first workflow worth automating.",
+    ],
+    faqs: [
+      {
+        question: "Is the WhatsApp Business API free?",
+        answer:
+          "No. Meta charges for messages according to its current regional pricing, and most businesses also pay a Business Solution Provider or developer for setup and hosting. The free WhatsApp Business app remains an option for very small volumes.",
+      },
+      {
+        question: "Can a WhatsApp AI agent reply in Malayalam?",
+        answer:
+          "Yes. Modern AI agents handle Malayalam, English, and mixed Manglish messages, and can be configured to reply in the customer's language while working only from the business's approved information.",
+      },
+      {
+        question: "Will customers know they're talking to automation?",
+        answer:
+          "They should. We recommend a clear line at the start of the conversation and an easy way to reach a person at any point — transparency builds more trust than pretending to be human.",
+      },
+    ],
+  },
+  {
+    slug: "google-ai-overviews-local-businesses-kerala",
+    title: "Google AI Overviews: What They Mean for Local Businesses in Kerala",
+    excerpt:
+      "Google now answers many searches itself before showing any links. Here's what that does to your traffic — and what a Kerala business can do to be the source it cites.",
+    image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=1200&auto=format&fit=crop",
+    category: "SEO",
+    date: "September 2026",
+    publishedAt: "2026-09-29",
+    author: "Versa Digital Team",
+    keywords: ["Google AI Overviews", "AI Mode Google India", "local SEO Kerala 2026", "zero-click search", "get cited in AI Overviews"],
+    body: [
+      "Short answer: AI Overviews are the AI-written summaries Google shows above the regular results for many searches, with links to the pages it drew from. They mean fewer clicks for purely informational searches, but local and high-intent searches still lead to calls, direction requests, and visits. A Kerala business protects itself by becoming one of the sources Google cites and by strengthening its Google Business Profile, which still drives the map results for 'near me' searches.",
+      "## Are AI Overviews taking my website traffic?",
+      "For some searches, yes. If people used to land on your site to read a simple definition or a quick tip, Google may now answer that directly, and fewer of them will click through. But the searches that make you money — 'dentist in Kakkanad open now', 'ERP developer Kochi', 'wedding photographer Thrissur price' — are ones where the customer still needs to choose and contact a business. Those searches lean heavily on the local map results, reviews, and your own pages.",
+      "## How does Google decide which pages to cite?",
+      "Google hasn't published a formula, but the pattern across the pages it cites is consistent: they answer the question directly and early, they're clearly structured with headings that match real questions, they come from sites Google already considers trustworthy on the topic, and the facts on them agree with other sources. That's the same checklist we use for ChatGPT and Perplexity visibility — which is why AEO and modern SEO are converging into one discipline.",
+      "## What should a local Kerala business do this month?",
+      "First, complete and refresh your Google Business Profile: correct category, services, hours, photos, and a steady flow of genuine reviews with replies. Second, rewrite your key service pages so the first two sentences answer what, where, and for whom — plainly. Third, add question-led FAQ sections to the pages people land on, with FAQ schema. Fourth, check your business name, address, and phone match exactly across every listing. None of this is exotic, but most local sites still skip it.",
+      "## Should I still write blog content?",
+      "Yes, but differently. Thin 'what is X' posts written purely for traffic are the content most exposed to AI answers. Content that shows real experience — local pricing context, comparisons from actual projects, honest trade-offs, specific Kerala examples — is the kind Google and AI tools prefer to cite, because it contains information they can't generate from generic sources.",
+      "## How do I know if my business appears in AI Overviews?",
+      "Search the questions your customers ask, from a phone, in the locations you serve, and note whether an AI Overview appears and which sources it links. Repeat monthly. In Search Console, watch for pages whose impressions stay high while clicks fall — they're usually candidates for a stronger, more specific answer.",
+      "Every SEO and AEO plan at Versa Digital now includes AI Overview tracking for the core questions in your category, alongside Google Business Profile management. If you'd like to see which of your customers' questions Google is already answering without you, we'll run that check for free.",
+    ],
+    faqs: [
+      {
+        question: "Can I opt my website out of Google AI Overviews?",
+        answer:
+          "Google offers controls like the nosnippet directive that limit how your content is shown, but they also reduce how your pages appear in regular search snippets. For most businesses, aiming to be cited is a better strategy than opting out.",
+      },
+      {
+        question: "Do AI Overviews affect Google Maps and local results?",
+        answer:
+          "Local map results and Google Business Profiles remain central for 'near me' and location-based searches. Keeping your profile complete, accurate, and well-reviewed is still one of the highest-impact local SEO actions.",
+      },
+      {
+        question: "Is SEO still worth it with AI Overviews?",
+        answer:
+          "Yes. The pages Google cites in AI Overviews are drawn from its search index, so strong technical SEO and clear, trustworthy content are what make your business eligible to be cited at all.",
+      },
+    ],
+  },
+  {
     slug: "what-is-aeo-why-kerala-businesses-need-it",
     title: "What is AEO and Why Kerala Businesses Need It",
     excerpt:
@@ -408,6 +537,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
     category: "AEO",
     date: "July 2026",
+    publishedAt: "2026-07-08",
     author: "Versa Digital Team",
     body: [
       "For the past two decades, ranking on Google was the entire game. Businesses fought over the top 10 blue links, invested in backlinks, and obsessed over keyword density. That game hasn't disappeared — but a new one has quietly started running alongside it, and most Kerala businesses haven't noticed yet.",
@@ -427,6 +557,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop",
     category: "AI Marketing",
     date: "July 2026",
+    publishedAt: "2026-07-22",
     author: "Versa Digital Team",
     body: [
       "Two years ago, 'AI marketing' mostly meant a chatbot generating slightly awkward Instagram captions. In 2026, that framing feels almost quaint. AI now touches nearly every stage of a marketing campaign — research, creative production, ad optimization, and reporting — and the agencies that haven't adapted are visibly falling behind on cost and speed.",
@@ -445,6 +576,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?q=80&w=1200&auto=format&fit=crop",
     category: "Performance Marketing",
     date: "June 2026",
+    publishedAt: "2026-06-24",
     author: "Versa Digital Team",
     body: [
       "It's one of the most common questions we hear from new clients: should our budget go to Meta Ads or Google Ads? The honest answer is that it depends on how your specific customer actually makes buying decisions — and most businesses benefit from understanding both before committing a budget to either.",
@@ -463,6 +595,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?q=80&w=1200&auto=format&fit=crop",
     category: "AEO",
     date: "August 2026",
+    publishedAt: "2026-08-05",
     author: "Versa Digital Team",
     body: [
       "Once a business understands what AEO is, the next question is always the same: okay, but how do we actually do it? Unlike traditional SEO, where the tactics are well documented after two decades of collective trial and error, AEO is new enough that most Kerala businesses are working from guesswork. So here's the actual checklist we run through with every client — no theory, just the specific things that move the needle.",
@@ -483,6 +616,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
     category: "SEO",
     date: "August 2026",
+    publishedAt: "2026-08-14",
     author: "Versa Digital Team",
     body: [
       "If you run a local business in Kerala — a clinic, a restaurant, a salon, a coaching institute — your Google Business Profile is probably the single highest-leverage marketing asset you own, and it's free. Yet in our audits, the vast majority of local businesses we look at have an unclaimed, incomplete, or badly outdated profile. That's a direct loss of the customers searching 'near me' right now, today, ready to walk in or call.",
@@ -502,6 +636,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
     category: "Social Media",
     date: "August 2026",
+    publishedAt: "2026-08-26",
     author: "Versa Digital Team",
     body: [
       "Almost every business we talk to is already posting reels. Very few are seeing real growth from it. The gap isn't effort — it's that most reels are treated as a format instead of a strategy, and Instagram's algorithm in 2026 rewards a much more specific set of behaviors than 'post a video regularly'.",
@@ -521,6 +656,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop",
     category: "IT Solutions",
     date: "September 2026",
+    publishedAt: "2026-09-14",
     author: "Versa Digital Team",
     body: [
       "Every growing business in Kerala eventually hits the same wall: spreadsheets that don't talk to each other, an accounting tool that doesn't know what the sales team promised a customer, and a WhatsApp group standing in for an inventory system. The question that follows is almost always the same — do we buy an off-the-shelf platform, or build something custom? The honest answer depends less on budget than most business owners assume, and more on how close your actual workflow is to how the software already thinks.",
@@ -540,6 +676,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
     category: "AI Automation",
     date: "September 2026",
+    publishedAt: "2026-09-14",
     author: "Versa Digital Team",
     body: [
       "\"AI agent\" has become one of those phrases that gets attached to almost anything with a chat window, which makes it genuinely hard for a business owner to know what they're actually being sold. Stripped of the marketing, an AI agent is software that can take a goal, break it into steps, use tools or data to complete those steps, and adjust when something doesn't go as expected — without a human manually driving every action. That last part is the real difference from a chatbot, which mostly just answers questions inside a single conversation.",
@@ -559,6 +696,7 @@ export const blogPosts: BlogPost[] = [
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop",
     category: "Web Development",
     date: "September 2026",
+    publishedAt: "2026-09-14",
     author: "Versa Digital Team",
     body: [
       "Most business owners judge their website the way they'd judge a brochure — does it look good, does it say the right things. Google, and increasingly your actual customers on a mobile connection, judge it on something else entirely: how fast it loads and how stable it feels while doing so. A visually striking site that takes six seconds to become usable is losing customers and search rankings before a single visitor reads a word of your copy.",
@@ -693,6 +831,36 @@ export const faqs: FaqItem[] = [
     answer:
       "Yes — every site we build or rebuild under Web Development is measured against Core Web Vitals from day one, and we offer a free speed audit for existing sites to identify what's actually slowing customers down before you spend more on ads.",
   },
+  {
+    question: "What is GEO (Generative Engine Optimization)?",
+    answer:
+      "GEO is optimizing your content so AI tools like ChatGPT, Gemini, Perplexity, and Google's AI Overviews cite your business in their generated answers. In practice it overlaps almost entirely with AEO, and we deliver both as one discipline.",
+  },
+  {
+    question: "Do you help businesses appear in Google AI Overviews?",
+    answer:
+      "Yes. Our SEO and AEO plans include restructuring key pages to answer questions directly, adding FAQ and Article schema, strengthening your Google Business Profile, and tracking whether Google's AI Overviews cite your pages for your customers' core questions.",
+  },
+  {
+    question: "Can you automate our WhatsApp enquiries?",
+    answer:
+      "Yes. We set up WhatsApp Business API automations and AI agents that reply instantly, answer common questions in English or Malayalam, qualify leads, book appointments, and hand conversations to your team with full context — connected to your CRM if you have one.",
+  },
+  {
+    question: "How long does a WhatsApp automation setup take?",
+    answer:
+      "A focused lead-capture and FAQ automation typically takes two to four weeks including Meta verification, template approval, and testing. Integrations with a custom CRM or ERP add time depending on the system.",
+  },
+  {
+    question: "Has Versa Digital & IT Solutions delivered live ERP, CRM, and automation projects?",
+    answer:
+      "Yes. Our custom ERP, CRM, AI agent, and workflow automation projects are live and running in production for client businesses — 20+ ERP and custom agent builds, 30+ AI agents, and 20+ business automations to date. See our IT Solutions page for details.",
+  },
+  {
+    question: "Do you publish content in Malayalam?",
+    answer:
+      "Yes. We produce social content, ad creatives, and WhatsApp flows in Malayalam, English, or a natural mix of both, depending on who your customers are and how they actually talk.",
+  },
 ];
 
 export const fullServices: FullService[] = [
@@ -779,10 +947,13 @@ export const fullServices: FullService[] = [
   },
 ];
 
+export const itStatsLabel = "Live ERP, CRM & automation projects in production";
+
 export const itStats: { value: string; label: string }[] = [
+  { value: "20+", label: "ERP & Custom Agent Builds Live" },
+  { value: "30+", label: "AI Agents Deployed" },
+  { value: "20+", label: "Business Automations Running" },
   { value: "30+", label: "Websites Delivered" },
-  { value: "10+", label: "Custom ERP Systems Built" },
-  { value: "4", label: "IT Solution Areas" },
 ];
 
 export const techOfferings: FullService[] = [

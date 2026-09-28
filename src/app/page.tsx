@@ -18,6 +18,7 @@ import GoldDivider from "@/components/shared/GoldDivider";
 import { services, siteConfig, portals } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
   description:
     "Kerala's first AEO-driven digital services and IT solutions company. Performance marketing, SEO/AEO, social media & web development — plus AI automation, agentic AI, custom ERP & CRM development. Kochi, Kerala.",

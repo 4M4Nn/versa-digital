@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { blogPosts } from "@/lib/data";
+import { blogPosts, siteConfig } from "@/lib/data";
 import { whatsappUrl } from "@/lib/whatsapp";
+
+const SITE_URL = "https://www.versadigital.in";
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -18,7 +20,23 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
-  return { title: post.title, description: post.excerpt };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    keywords: post.keywords,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${post.slug}`,
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt ?? post.publishedAt,
+      authors: [post.author],
+      section: post.category,
+      images: [{ url: post.image, alt: post.title }],
+    },
+  };
 }
 
 export default async function BlogPostPage({
@@ -30,7 +48,55 @@ export default async function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const related = blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
+  const related = [
+    ...blogPosts.filter((p) => p.slug !== slug && p.category === post.category),
+    ...blogPosts.filter((p) => p.slug !== slug && p.category !== post.category),
+  ].slice(0, 2);
+
+  const postUrl = `${SITE_URL}/blog/${post.slug}`;
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.excerpt,
+      image: post.image,
+      datePublished: post.publishedAt,
+      dateModified: post.updatedAt ?? post.publishedAt,
+      author: { "@type": "Organization", name: post.author, url: SITE_URL },
+      publisher: {
+        "@type": "Organization",
+        name: siteConfig.fullName,
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
+      },
+      mainEntityOfPage: postUrl,
+      articleSection: post.category,
+      keywords: post.keywords?.join(", "),
+      inLanguage: "en-IN",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+        { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+      ],
+    },
+    ...(post.faqs?.length
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: post.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: { "@type": "Answer", text: faq.answer },
+            })),
+          },
+        ]
+      : []),
+  ];
 
   return (
     <div data-navbar-theme="dark">
@@ -41,18 +107,38 @@ export default async function BlogPostPage({
           <span className="rounded-full bg-violet px-3 py-1 text-[10px] font-bold text-white">{post.category}</span>
           <h1 className="mt-4 font-heading text-3xl font-extrabold text-white md:text-4xl">{post.title}</h1>
           <p className="mt-2 text-sm text-white/70">
-            {post.date} · {post.author}
+            <time dateTime={post.publishedAt}>{post.date}</time> · {post.author}
           </p>
         </div>
       </section>
 
       <article data-navbar-theme="light" className="bg-bg-light px-5 py-14 md:px-8">
         <div className="mx-auto max-w-2xl">
-          {post.body.map((paragraph, i) => (
-            <p key={i} className="mb-5 text-base leading-relaxed text-text-dark/85">
-              {paragraph}
-            </p>
-          ))}
+          {post.body.map((paragraph, i) =>
+            paragraph.startsWith("## ") ? (
+              <h2 key={i} className="mb-3 mt-10 font-heading text-xl font-bold text-text-dark md:text-2xl">
+                {paragraph.slice(3)}
+              </h2>
+            ) : (
+              <p key={i} className="mb-5 text-base leading-relaxed text-text-dark/85">
+                {paragraph}
+              </p>
+            )
+          )}
+
+          {post.faqs && post.faqs.length > 0 && (
+            <section className="mt-12">
+              <h2 className="font-heading text-xl font-bold text-text-dark md:text-2xl">Frequently asked questions</h2>
+              <div className="mt-5 space-y-4">
+                {post.faqs.map((faq) => (
+                  <div key={faq.question} className="rounded-xl border border-text-dark/10 bg-white p-5">
+                    <h3 className="font-heading text-base font-bold text-text-dark">{faq.question}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-text-dark/80">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           <div className="mt-12 rounded-2xl border border-violet/15 bg-violet-pale p-7">
             <p className="font-heading text-lg font-bold text-text-dark">
@@ -89,6 +175,8 @@ export default async function BlogPostPage({
           )}
         </div>
       </article>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </div>
   );
 }

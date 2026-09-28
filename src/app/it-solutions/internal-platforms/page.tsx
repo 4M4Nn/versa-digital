@@ -10,6 +10,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { techOfferings } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/it-solutions/internal-platforms" },
   title: "Internal Platforms & Custom Dashboards",
   description:
     "Custom dashboards, admin panels, and operational tools built around how your team actually works — replacing spreadsheets with real-time visibility. Versa Digital, Kochi.",

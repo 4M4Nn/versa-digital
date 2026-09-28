@@ -9,6 +9,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/branding-content" },
   title: "Branding & Content — Strategy, Design & Video",
   description:
     "Brand positioning, visual identity, and premium content production — posters, reels, and AI-generated video, produced consistently every week by Versa Digital.",

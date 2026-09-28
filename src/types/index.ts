@@ -77,8 +77,14 @@ export interface BlogPost {
   image: string;
   category: string;
   date: string;
+  /** ISO date (YYYY-MM-DD) used for sitemap and BlogPosting schema */
+  publishedAt: string;
+  updatedAt?: string;
   author: string;
+  /** Paragraphs; a string starting with "## " renders as an H2 question heading */
   body: string[];
+  keywords?: string[];
+  faqs?: FaqItem[];
 }
 
 export interface FaqItem {

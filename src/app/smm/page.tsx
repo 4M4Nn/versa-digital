@@ -10,6 +10,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { growthPackages } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/smm" },
   title: "Social Media Marketing",
   description:
     "Instagram, Facebook, LinkedIn, YouTube, and Google Business Profile management from Versa Digital — premium content that stops the scroll.",

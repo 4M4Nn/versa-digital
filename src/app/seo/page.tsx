@@ -9,6 +9,7 @@ import SEOVisual from "@/components/home/visuals/SEOVisual";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/seo" },
   title: "AI SEO Services in Kerala",
   description:
     "Rank higher on Google with Versa Digital's AI-powered SEO services — technical audits, keyword strategy, content, and link building for Kerala businesses.",

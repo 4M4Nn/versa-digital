@@ -10,6 +10,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/web-development" },
   title: "Web Development — Fast, SEO-Ready Websites",
   description:
     "Mobile-first websites and web apps built on modern frameworks, engineered for speed, conversions, and SEO/AEO from day one. Versa Digital, Kochi, Kerala.",

@@ -7,6 +7,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Digital Services",
   description:
     "Performance marketing, AI SEO/AEO, social media marketing, web development, lead generation, and branding & content — Versa Digital's full Digital Services portal.",

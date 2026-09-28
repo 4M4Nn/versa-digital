@@ -8,6 +8,7 @@ import MagneticButton from "@/components/shared/MagneticButton";
 import { whatsappUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/aeo" },
   title: "AEO — Answer Engine Optimization | Kerala's First",
   description:
     "Versa Digital is Kerala's first Answer Engine Optimization (AEO) agency — making your business the answer ChatGPT, Perplexity, and Google AI give.",

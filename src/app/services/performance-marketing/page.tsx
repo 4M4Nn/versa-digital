@@ -9,6 +9,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/performance-marketing" },
   title: "Performance Marketing — Meta & Google Ads",
   description:
     "Meta Ads, Google Ads, and LinkedIn Ads managed for real conversions, not vanity metrics. Versa Digital's performance marketing delivers 4x average ROAS for Kerala businesses.",

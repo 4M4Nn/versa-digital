@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GraduationCap, Bot, LayoutDashboard, Network, CheckCircle2, ArrowRight, Megaphone } from "lucide-react";
+import { GraduationCap, Bot, LayoutDashboard, Network, Smartphone, Code2, Monitor, ShoppingCart, PenTool, Plug, CheckCircle2, ArrowRight, Megaphone } from "lucide-react";
 import PageHero from "@/components/shared/PageHero";
 import Reveal from "@/components/shared/Reveal";
 import ServiceSchema from "@/components/shared/ServiceSchema";
@@ -19,6 +19,12 @@ const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   bot: Bot,
   "layout-dashboard": LayoutDashboard,
   network: Network,
+  smartphone: Smartphone,
+  "code-2": Code2,
+  monitor: Monitor,
+  "shopping-cart": ShoppingCart,
+  "pen-tool": PenTool,
+  plug: Plug,
 };
 
 export default function ItSolutionsPage() {

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileStickyBar from "@/components/layout/MobileStickyBar";
+import SmoothScroll from "@/components/layout/SmoothScroll";
 import { siteConfig } from "@/lib/data";
 
 const interTight = Inter_Tight({
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${interTight.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}>
       <body className="bg-bg-light font-body text-text-dark antialiased bg-grain">
+        <SmoothScroll />
         <Navbar />
         <main className="pb-16 md:pb-0">{children}</main>
         <Footer />

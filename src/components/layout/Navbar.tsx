@@ -118,7 +118,7 @@ export default function Navbar() {
 
                   {openDropdown === link.label && link.children && (
                     <div className="absolute left-1/2 top-full w-[22rem] -translate-x-1/2 pt-3">
-                      <div className="max-h-[70vh] overflow-y-auto rounded-xl border border-text-dark/10 bg-white p-2 shadow-[0_24px_60px_-20px_rgba(18,17,24,0.25)]">
+                      <div data-lenis-prevent className="max-h-[70vh] overflow-y-auto rounded-xl border border-text-dark/10 bg-white p-2 shadow-[0_24px_60px_-20px_rgba(18,17,24,0.25)]">
                         {link.children.map((child) => (
                           <Link key={child.href} href={child.href} className="block rounded-lg px-4 py-2.5 transition-colors hover:bg-bg-light">
                             <span className="block text-sm font-semibold text-text-dark">{child.label}</span>
@@ -189,7 +189,7 @@ export default function Navbar() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-bg-light">
+        <div data-lenis-prevent className="fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-bg-light">
           <div className="flex items-center justify-between px-5 py-3.5">
             <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
               <Logo size={34} />

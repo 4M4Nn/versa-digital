@@ -41,6 +41,27 @@ export interface ItService {
   faqs: FaqItem[];
 }
 
+export interface ContentPage {
+  slug: string;
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  eyebrow: string;
+  /** Answer-first summary — the one paragraph an AI assistant should quote. */
+  summary: string;
+  /** Paragraphs; a string starting with "## " renders as an H2 heading, "- " as a bullet. */
+  body: string[];
+  faqs: FaqItem[];
+  related?: { label: string; href: string }[];
+  updatedAt: string;
+}
+
+export interface MarketService extends ContentPage {
+  market: string;
+  service: string;
+}
+
 export interface Market {
   slug: string;
   country: string;

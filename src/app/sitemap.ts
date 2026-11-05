@@ -2,6 +2,11 @@ import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/data";
 import { itCatalog } from "@/lib/it-services";
 import { markets } from "@/lib/markets";
+import { glossary } from "@/lib/content/glossary";
+import { comparisons } from "@/lib/content/comparisons";
+import { costGuides } from "@/lib/content/cost-guides";
+import { industries } from "@/lib/content/industries";
+import { marketServices } from "@/lib/content/market-services";
 
 const BASE = "https://www.versadigital.in";
 
@@ -37,6 +42,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...itCatalog.map((i) => page(i.href, 0.8)),
     page("/global", 0.9),
     ...markets.map((m) => page(`/global/${m.slug}`, 0.85)),
+    ...marketServices.map((s) => page(`/global/${s.market}/${s.slug}`, 0.85)),
+    page("/industries", 0.7),
+    ...industries.map((p) => page(`/industries/${p.slug}`, 0.7)),
+    page("/compare", 0.6),
+    ...comparisons.map((p) => page(`/compare/${p.slug}`, 0.7)),
+    page("/cost-guides", 0.6),
+    ...costGuides.map((p) => page(`/cost-guides/${p.slug}`, 0.7)),
+    page("/glossary", 0.6),
+    ...glossary.map((p) => page(`/glossary/${p.slug}`, 0.6)),
     page("/packages", 0.8),
     page("/portfolio", 0.7),
     page("/about", 0.7, "yearly"),

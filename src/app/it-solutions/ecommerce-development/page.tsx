@@ -127,7 +127,7 @@ export default function EcommerceDevelopmentPage() {
             <p className="text-sm font-semibold uppercase tracking-wider text-violet">Pairs well with</p>
             <p className="mt-2 text-text-muted">
               Add{" "}
-              <Link href="/services/seo-aeo" className="font-semibold text-violet hover:text-violet-light">
+              <Link href="/seo" className="font-semibold text-violet hover:text-violet-light">
                 SEO/AEO
               </Link>{" "}
               to make your products rank and answer search queries, and{" "}

@@ -31,6 +31,17 @@ export const mainNav: NavLink[] = [
   },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
-  { label: "Insights", href: "/blog" },
+  {
+    label: "Resources",
+    href: "/blog",
+    children: [
+      { label: "Insights & articles", href: "/blog", description: "Guides for buyers in the UAE, UK, USA and beyond" },
+      { label: "Industries", href: "/industries", description: "Marketing and IT by sector" },
+      { label: "Comparisons", href: "/compare", description: "Odoo vs Zoho, Flutter vs React Native and more" },
+      { label: "Cost guides", href: "/cost-guides", description: "Indicative 2026 pricing" },
+      { label: "Glossary", href: "/glossary", description: "AEO, GEO, RAG, ERP and more, explained" },
+      { label: "FAQ", href: "/faq", description: "Common questions answered" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];

@@ -12,6 +12,8 @@ import type {
   Portal,
 } from "@/types";
 import { internationalPosts } from "@/lib/blog-international";
+import { globalPostsGulfUk } from "@/lib/blog-global-1";
+import { globalPostsAmericasApac } from "@/lib/blog-global-2";
 
 export const siteConfig = {
   name: "Versa Digital",
@@ -408,6 +410,8 @@ export const founders: Founder[] = [
 
 export const blogPosts: BlogPost[] = [
   ...internationalPosts,
+  ...globalPostsGulfUk,
+  ...globalPostsAmericasApac,
   {
     slug: "mobile-app-development-cost-timeline-india-2026",
     title: "Mobile App Development Cost and Timeline in India 2026: A Realistic Guide",

@@ -7,6 +7,7 @@ import ClosingCta from "@/components/shared/ClosingCta";
 import FaqBlock from "@/components/shared/FaqBlock";
 import { siteConfig } from "@/lib/data";
 import { getMarket, markets } from "@/lib/markets";
+import { getMarketServices } from "@/lib/content/market-services";
 
 const SITE_URL = "https://www.versadigital.in";
 
@@ -35,6 +36,7 @@ export default async function MarketPage({ params }: { params: Promise<{ market:
   if (!m) notFound();
 
   const others = markets.filter((o) => o.slug !== m.slug);
+  const localServices = getMarketServices(m.slug);
 
   return (
     <div>
@@ -188,6 +190,26 @@ export default async function MarketPage({ params }: { params: Promise<{ market:
           </div>
         </div>
       </section>
+
+      {localServices.length > 0 && (
+        <section data-navbar-theme="light" className="bg-ivory px-5 py-20 md:px-8">
+          <div className="mx-auto max-w-6xl">
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">In-depth guides for {m.shortName}</p>
+            <h2 className="mt-4 max-w-2xl font-heading text-3xl font-semibold text-text-dark md:text-4xl">{m.shortName} service pages</h2>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {localServices.map((s) => (
+                <Link key={s.slug} href={`/global/${m.slug}/${s.slug}`} className="group flex flex-col rounded-xl border border-text-dark/10 bg-bg-light p-7 transition-colors hover:border-text-dark/30">
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="font-heading text-lg font-semibold text-text-dark">{s.title}</h3>
+                    <ArrowUpRight className="size-4 shrink-0 text-text-muted transition-colors group-hover:text-violet" />
+                  </div>
+                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-text-muted">{s.summary}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <FaqBlock faqs={m.faqs} heading={`Working with us from ${m.country}`} />
 

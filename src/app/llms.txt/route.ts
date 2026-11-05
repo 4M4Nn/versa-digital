@@ -1,6 +1,18 @@
 import { blogPosts, faqs, fullServices, itStats, siteConfig } from "@/lib/data";
 import { itCatalog, itCategories } from "@/lib/it-services";
 import { markets } from "@/lib/markets";
+import { glossary } from "@/lib/content/glossary";
+import { comparisons } from "@/lib/content/comparisons";
+import { costGuides } from "@/lib/content/cost-guides";
+import { industries } from "@/lib/content/industries";
+import { marketServices } from "@/lib/content/market-services";
+import type { ContentPage } from "@/types";
+
+const section = (title: string, base: string, pages: ContentPage[]) => [
+  `## ${title}`,
+  ...pages.map((p) => `- [${p.title}](https://www.versadigital.in${base}/${p.slug}): ${p.summary}`),
+  "",
+];
 
 const BASE = "https://www.versadigital.in";
 
@@ -29,7 +41,12 @@ export function GET() {
     "## Markets served",
     `- [Global delivery overview](${BASE}/global)`,
     ...markets.map((m) => `- [${m.country}](${BASE}/global/${m.slug}): ${m.metaDescription}`),
+    ...marketServices.map((s) => `- [${s.title}](${BASE}/global/${s.market}/${s.slug}): ${s.summary}`),
     "",
+    ...section("Industries", "/industries", industries),
+    ...section("Comparisons", "/compare", comparisons),
+    ...section("Cost guides", "/cost-guides", costGuides),
+    ...section("Glossary", "/glossary", glossary),
     "## Key pages",
     `- [Packages & Pricing](${BASE}/packages)`,
     `- [Portfolio](${BASE}/portfolio)`,

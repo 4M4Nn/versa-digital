@@ -37,6 +37,10 @@ const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Insights", href: "/blog" },
+  { label: "Industries", href: "/industries" },
+  { label: "Comparisons", href: "/compare" },
+  { label: "Cost guides", href: "/cost-guides" },
+  { label: "Glossary", href: "/glossary" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];

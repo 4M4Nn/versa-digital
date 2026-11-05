@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { blogPosts, siteConfig } from "@/lib/data";
 import { whatsappUrl } from "@/lib/whatsapp";
+import RichBody from "@/components/shared/RichBody";
 
 const SITE_URL = "https://www.versadigital.in";
 
@@ -72,7 +73,7 @@ export default async function BlogPostPage({
       mainEntityOfPage: postUrl,
       articleSection: post.category,
       keywords: post.keywords?.join(", "),
-      inLanguage: "en-IN",
+      inLanguage: "en",
     },
     {
       "@context": "https://schema.org",
@@ -114,17 +115,7 @@ export default async function BlogPostPage({
 
       <article data-navbar-theme="light" className="bg-bg-light px-5 py-14 md:px-8">
         <div className="mx-auto max-w-2xl">
-          {post.body.map((paragraph, i) =>
-            paragraph.startsWith("## ") ? (
-              <h2 key={i} className="mb-3 mt-10 font-heading text-xl font-bold text-text-dark md:text-2xl">
-                {paragraph.slice(3)}
-              </h2>
-            ) : (
-              <p key={i} className="mb-5 text-base leading-relaxed text-text-dark/85">
-                {paragraph}
-              </p>
-            )
-          )}
+          <RichBody body={post.body} />
 
           {post.faqs && post.faqs.length > 0 && (
             <section className="mt-12">

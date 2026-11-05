@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   title: "Blog",
   description:
-    "Insights on AEO, GEO, SEO, AI marketing, performance advertising, WhatsApp automation, AI agents and custom ERP from the Versa Digital & IT Solutions team in Kochi, Kerala.",
+    "Insights on AEO, GEO, SEO, AI marketing, performance advertising, WhatsApp automation, AI agents and custom ERP from the Versa Digital & IT Solutions team — written for businesses in India, the Gulf, the UK and North America.",
 };
 
 export default function BlogPage() {

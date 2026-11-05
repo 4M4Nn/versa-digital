@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/web-development" },
   title: "Web Development — Fast, SEO-Ready Websites",
   description:
-    "Mobile-first websites and web apps built on modern frameworks, engineered for speed, conversions, and SEO/AEO from day one. Versa Digital, Kochi, Kerala.",
+    "Mobile-first websites and web apps built on modern frameworks, engineered for speed, conversions, and SEO/AEO from day one. Delivered worldwide from Kochi, India.",
 };
 
 const service = fullServices.find((s) => s.id === "web-development")!;
@@ -44,7 +44,7 @@ export default function WebDevelopmentPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-4xl">
           <Reveal>
-            <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               More than a digital brochure
             </h2>
           </Reveal>
@@ -70,7 +70,7 @@ export default function WebDevelopmentPage() {
       <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Why it matters
             </h2>
           </Reveal>
@@ -91,7 +91,7 @@ export default function WebDevelopmentPage() {
       <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-white md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-white md:text-4xl">
               Our web development process
             </h2>
           </Reveal>
@@ -142,7 +142,7 @@ export default function WebDevelopmentPage() {
 
       <section data-navbar-theme="dark" className="bg-gradient-to-br from-violet to-dark-shade px-5 py-20 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-extrabold text-white md:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold text-white md:text-4xl">
             Let&apos;s build a website that actually performs.
           </h2>
           <MagneticButton

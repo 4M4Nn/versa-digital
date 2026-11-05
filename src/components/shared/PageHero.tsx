@@ -30,7 +30,7 @@ export default function PageHero({
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className={cn("mt-4 font-heading text-4xl font-extrabold leading-tight md:text-6xl", dark ? "text-white" : "text-text-dark")}>
+          <h1 className={cn("mt-4 font-heading text-4xl font-semibold leading-tight md:text-6xl", dark ? "text-white" : "text-text-dark")}>
             {heading}
           </h1>
         </Reveal>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/smm" },
   title: "Social Media Marketing",
   description:
-    "Instagram, Facebook, LinkedIn, YouTube, and Google Business Profile management from Versa Digital — premium content that stops the scroll.",
+    "Instagram, Facebook, LinkedIn, YouTube, and Google Business Profile management from Versa Digital — premium content that stops the scroll, for brands in India, the Gulf and beyond.",
 };
 
 const PLATFORMS = [
@@ -50,7 +50,7 @@ export default function SmmPage() {
       <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Platform by platform
             </h2>
           </Reveal>
@@ -70,7 +70,7 @@ export default function SmmPage() {
       <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-white md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-white md:text-4xl">
               What we create
             </h2>
           </Reveal>
@@ -100,7 +100,7 @@ export default function SmmPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <Reveal>
-            <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               SMM is included in every Digital Growth Plan
             </h2>
           </Reveal>
@@ -139,7 +139,7 @@ export default function SmmPage() {
 
       <section data-navbar-theme="dark" className="bg-gradient-to-br from-violet to-dark-shade px-5 py-20 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-extrabold text-white md:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold text-white md:text-4xl">
             Let&apos;s make your feed impossible to scroll past.
           </h2>
           <MagneticButton

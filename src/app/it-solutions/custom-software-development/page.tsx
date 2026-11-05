@@ -44,7 +44,7 @@ export default function CustomSoftwareDevelopmentPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-4xl">
           <Reveal>
-            <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               When custom software is the right call
             </h2>
           </Reveal>
@@ -70,7 +70,7 @@ export default function CustomSoftwareDevelopmentPage() {
       <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Why it matters
             </h2>
           </Reveal>
@@ -91,7 +91,7 @@ export default function CustomSoftwareDevelopmentPage() {
       <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-white md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-white md:text-4xl">
               Our development process
             </h2>
           </Reveal>
@@ -142,7 +142,7 @@ export default function CustomSoftwareDevelopmentPage() {
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
             Tell us what you&apos;re trying to replace.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-text-muted">

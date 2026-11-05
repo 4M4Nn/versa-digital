@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
-import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { seoPackages } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -15,7 +14,6 @@ export default function SeoPackagesSection() {
         <div className="absolute -right-20 top-10 size-80 rounded-full bg-violet/15 blur-3xl" />
         <div className="absolute -left-24 bottom-0 size-72 rounded-full bg-violet-light/10 blur-3xl" />
       </div>
-      <MarketingBackdrop variant="d" tone="dark" />
       <div className="relative z-10 mx-auto max-w-6xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet-light">
@@ -23,7 +21,7 @@ export default function SeoPackagesSection() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-4 font-heading text-4xl font-extrabold text-white md:text-5xl">
+          <h2 className="mt-4 font-heading text-4xl font-semibold text-white md:text-5xl">
             Dominate search results.
           </h2>
         </Reveal>
@@ -45,7 +43,7 @@ export default function SeoPackagesSection() {
               )}
               <h3 className="mt-3 font-heading text-xl font-bold text-white">{pkg.name}</h3>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="font-heading text-3xl font-extrabold text-white">{pkg.price}</span>
+                <span className="font-heading text-3xl font-semibold text-white">{pkg.price}</span>
                 <span className="text-sm text-white/50">{pkg.period}</span>
               </div>
 

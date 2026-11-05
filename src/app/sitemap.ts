@@ -1,9 +1,19 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/data";
+import { itCatalog } from "@/lib/it-services";
+import { markets } from "@/lib/markets";
 
 const BASE = "https://www.versadigital.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const page = (path: string, priority: number, changeFrequency: "weekly" | "monthly" | "yearly" = "monthly") => ({
+    url: `${BASE}${path}`,
+    lastModified: now,
+    changeFrequency,
+    priority,
+  });
+
   const posts = blogPosts.map((p) => ({
     url: `${BASE}/blog/${p.slug}`,
     lastModified: new Date(p.updatedAt ?? p.publishedAt),
@@ -11,38 +21,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const latestPost = posts.reduce<Date>(
-    (latest, p) => (p.lastModified > latest ? p.lastModified : latest),
-    new Date(0)
-  );
+  const latestPost = posts.reduce<Date>((latest, p) => (p.lastModified > latest ? p.lastModified : latest), new Date(0));
 
   return [
-    { url: BASE, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${BASE}/services`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/services/performance-marketing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/services/web-development`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/services/lead-generation`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/services/branding-content`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/it-solutions/saas-edtech`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/ai-automation`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/internal-platforms`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/client-solutions`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/mobile-app-development`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/custom-software-development`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/web-app-development`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/ecommerce-development`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/ui-ux-design`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/it-solutions/api-integrations`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/packages`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${BASE}/seo`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/aeo`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/smm`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE}/portfolio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE}/about`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
+    page("", 1, "weekly"),
+    page("/services", 0.9),
+    page("/services/performance-marketing", 0.8),
+    page("/services/web-development", 0.8),
+    page("/services/lead-generation", 0.8),
+    page("/services/branding-content", 0.8),
+    page("/seo", 0.8),
+    page("/aeo", 0.8),
+    page("/smm", 0.8),
+    page("/it-solutions", 0.9),
+    ...itCatalog.map((i) => page(i.href, 0.8)),
+    page("/global", 0.9),
+    ...markets.map((m) => page(`/global/${m.slug}`, 0.85)),
+    page("/packages", 0.8),
+    page("/portfolio", 0.7),
+    page("/about", 0.7, "yearly"),
     { url: `${BASE}/blog`, lastModified: latestPost, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/faq`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
+    page("/faq", 0.6),
+    page("/contact", 0.5, "yearly"),
     ...posts,
   ];
 }

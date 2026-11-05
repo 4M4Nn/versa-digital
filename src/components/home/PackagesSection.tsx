@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Check, X, Palette, PenTool, Megaphone, Smartphone, Search, BarChart3 } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
-import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 import { StaggerGroup, StaggerItem } from "@/components/shared/StaggerReveal";
 import { growthPackages, allPlansInclude } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -30,7 +29,6 @@ export default function PackagesSection() {
         <div className="absolute -left-24 top-10 size-72 rounded-full bg-violet/10 blur-3xl" />
         <div className="absolute -right-16 bottom-0 size-80 rounded-full bg-gold/10 blur-3xl" />
       </div>
-      <MarketingBackdrop variant="b" tone="light" />
       <div className="relative z-10 mx-auto max-w-6xl text-center">
         <Reveal>
           <span className="font-mono text-[11px] font-semibold tracking-[0.25em] text-violet">
@@ -38,7 +36,7 @@ export default function PackagesSection() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="mt-4 font-heading text-4xl font-extrabold text-text-dark md:text-5xl">
+          <h2 className="mt-4 font-heading text-4xl font-semibold text-text-dark md:text-5xl">
             Choose the strategy
             <br />
             that fits your business.
@@ -69,7 +67,7 @@ export default function PackagesSection() {
                 <p className={cn("mt-1 text-sm", dark ? "text-white/70" : "text-text-muted")}>{pkg.description}</p>
 
                 <div className="mt-5 flex items-baseline gap-1">
-                  <span className={cn("font-heading text-3xl font-extrabold", dark ? "text-white" : "text-text-dark")}>
+                  <span className={cn("font-heading text-3xl font-semibold", dark ? "text-white" : "text-text-dark")}>
                     {pkg.price}
                   </span>
                   <span className={cn("text-sm", dark ? "text-white/60" : "text-text-muted")}>{pkg.period}</span>

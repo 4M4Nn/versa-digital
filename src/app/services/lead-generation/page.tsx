@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services/lead-generation" },
   title: "Lead Generation — Funnels That Convert",
   description:
-    "Landing pages, funnels, and campaigns engineered to turn traffic into qualified leads in your CRM or WhatsApp. Versa Digital's lead generation service, Kochi.",
+    "Landing pages, funnels, and campaigns engineered to turn traffic into qualified leads in your CRM or WhatsApp. Lead generation for businesses in the UAE, UK, USA and India.",
 };
 
 const service = fullServices.find((s) => s.id === "lead-generation")!;
@@ -43,7 +43,7 @@ export default function LeadGenerationPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-4xl">
           <Reveal>
-            <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               What lead generation means at Versa Digital
             </h2>
           </Reveal>
@@ -68,7 +68,7 @@ export default function LeadGenerationPage() {
       <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Why our funnels convert
             </h2>
           </Reveal>
@@ -89,7 +89,7 @@ export default function LeadGenerationPage() {
       <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-white md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-white md:text-4xl">
               Our lead generation process
             </h2>
           </Reveal>
@@ -121,7 +121,7 @@ export default function LeadGenerationPage() {
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
             Ready for a funnel that actually fills your pipeline?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-text-muted">

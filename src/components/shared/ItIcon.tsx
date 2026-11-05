@@ -1,0 +1,55 @@
+import {
+  BarChart3,
+  Bot,
+  Boxes,
+  BrainCircuit,
+  Cloud,
+  Code2,
+  Compass,
+  FlaskConical,
+  GraduationCap,
+  LayoutDashboard,
+  LifeBuoy,
+  MessagesSquare,
+  Monitor,
+  Network,
+  PenTool,
+  Plug,
+  RefreshCw,
+  Server,
+  ShieldCheck,
+  ShoppingCart,
+  Smartphone,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+
+const ICONS: Record<string, LucideIcon> = {
+  "bar-chart-3": BarChart3,
+  bot: Bot,
+  boxes: Boxes,
+  "brain-circuit": BrainCircuit,
+  cloud: Cloud,
+  "code-2": Code2,
+  compass: Compass,
+  "flask-conical": FlaskConical,
+  "graduation-cap": GraduationCap,
+  "layout-dashboard": LayoutDashboard,
+  "life-buoy": LifeBuoy,
+  "messages-square": MessagesSquare,
+  monitor: Monitor,
+  network: Network,
+  "pen-tool": PenTool,
+  plug: Plug,
+  "refresh-cw": RefreshCw,
+  server: Server,
+  "shield-check": ShieldCheck,
+  "shopping-cart": ShoppingCart,
+  smartphone: Smartphone,
+  users: Users,
+};
+
+export default function ItIcon({ name, className }: { name: string; className?: string }) {
+  const Icon = ICONS[name] ?? Code2;
+  return <Icon className={className} aria-hidden="true" />;
+}

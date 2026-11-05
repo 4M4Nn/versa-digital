@@ -10,9 +10,9 @@ import { whatsappUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/seo" },
-  title: "AI SEO Services in Kerala",
+  title: "AI SEO Services — UAE, UK, USA & India",
   description:
-    "Rank higher on Google with Versa Digital's AI-powered SEO services — technical audits, keyword strategy, content, and link building for Kerala businesses.",
+    "Rank higher on Google with Versa Digital's AI-powered SEO services — technical audits, keyword strategy, content, and link building for businesses in the UAE, UK, USA, Saudi Arabia, Australia and Kerala, India.",
 };
 
 const WHY_ITEMS = [
@@ -47,7 +47,7 @@ export default function SeoPage() {
           </Reveal>
           <div>
             <Reveal>
-              <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+              <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
                 What is SEO, really?
               </h2>
             </Reveal>
@@ -72,7 +72,7 @@ export default function SeoPage() {
       <section data-navbar-theme="light" className="bg-violet-pale px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Why SEO matters for your business
             </h2>
           </Reveal>
@@ -93,7 +93,7 @@ export default function SeoPage() {
       <section data-navbar-theme="dark" className="bg-bg-dark px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-white md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-white md:text-4xl">
               Our SEO process
             </h2>
           </Reveal>
@@ -128,7 +128,7 @@ export default function SeoPage() {
 
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold text-text-dark md:text-4xl">
             Want to know where you actually stand?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-text-muted">

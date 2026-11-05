@@ -56,7 +56,7 @@ export default function PortfolioPage() {
                       <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-violet-light">
                         {cs.service}
                       </p>
-                      <p className="mt-6 font-heading text-5xl font-extrabold text-violet-light">{cs.metric}</p>
+                      <p className="mt-6 font-heading text-5xl font-semibold text-violet-light">{cs.metric}</p>
                       <p className="text-xs text-white/50">{cs.metricLabel}</p>
                     </div>
 
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
 
       <section data-navbar-theme="dark" className="bg-gradient-to-br from-violet to-dark-shade px-5 py-20 text-center md:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-extrabold text-white md:text-4xl">
+          <h2 className="font-heading text-3xl font-semibold text-white md:text-4xl">
             Your business could be next.
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-white/80">

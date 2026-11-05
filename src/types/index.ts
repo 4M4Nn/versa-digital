@@ -3,6 +3,66 @@ export interface NavLink {
   href: string;
   description?: string;
   children?: NavLink[];
+  columns?: { title: string; links: NavLink[] }[];
+}
+
+export type ItCategory =
+  | "Software Engineering"
+  | "AI & Data"
+  | "Cloud & Infrastructure"
+  | "Business Systems"
+  | "Security, Quality & Support";
+
+export interface ItCatalogItem {
+  slug: string;
+  name: string;
+  category: ItCategory;
+  icon: string;
+  description: string;
+  href: string;
+}
+
+export interface ItService {
+  slug: string;
+  category: ItCategory;
+  icon: string;
+  name: string;
+  shortDescription: string;
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  heroHeading: string;
+  heroSubtext: string;
+  overview: string[];
+  capabilities: { title: string; description: string }[];
+  technologies: string[];
+  process: string[];
+  outcomes: string[];
+  faqs: FaqItem[];
+}
+
+export interface Market {
+  slug: string;
+  country: string;
+  shortName: string;
+  isoCode: string;
+  region: "Gulf" | "Europe" | "North America" | "Asia-Pacific";
+  cities: string[];
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string[];
+  heroHeading: string;
+  heroSubtext: string;
+  intro: string[];
+  timeZone: string;
+  overlap: string;
+  currency: string;
+  priorities: { title: string; description: string }[];
+  compliance: string[];
+  payments: string[];
+  searchLandscape: string;
+  featuredServices: { label: string; href: string; reason: string }[];
+  faqs: FaqItem[];
 }
 
 export interface ServiceResult {

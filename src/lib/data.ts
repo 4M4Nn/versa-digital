@@ -11,6 +11,7 @@ import type {
   FullService,
   Portal,
 } from "@/types";
+import { internationalPosts } from "@/lib/blog-international";
 
 export const siteConfig = {
   name: "Versa Digital",
@@ -406,6 +407,7 @@ export const founders: Founder[] = [
 ];
 
 export const blogPosts: BlogPost[] = [
+  ...internationalPosts,
   {
     slug: "mobile-app-development-cost-timeline-india-2026",
     title: "Mobile App Development Cost and Timeline in India 2026: A Realistic Guide",
@@ -978,6 +980,44 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+export const globalFaqs: FaqItem[] = [
+  {
+    question: "Does Versa Digital & IT Solutions work with clients outside India?",
+    answer:
+      "Yes. We deliver digital marketing, SEO/AEO, software development, AI automation and IT services from Kochi, India, for businesses in the UAE, UK, USA, Saudi Arabia, Qatar, Canada, Australia and Singapore, as well as across India.",
+  },
+  {
+    question: "How do you handle time-zone differences?",
+    answer:
+      "We plan working hours around each market. Gulf clients share almost the whole working day (India is 1.5–2.5 hours ahead), UK and European clients get four to five overlapping morning hours, Australian clients overlap in their afternoon, and North American clients get a daily handover window with work completed overnight.",
+  },
+  {
+    question: "How do you protect our data and intellectual property?",
+    answer:
+      "Every engagement includes an NDA and assigns all intellectual property to the client. We work in client-owned code repositories and cloud accounts, limit access by role, and sign data-processing agreements aligned with UK GDPR, CCPA/CPRA, the UAE PDPL and other applicable laws.",
+  },
+  {
+    question: "Which currencies do you invoice in?",
+    answer:
+      "Proposals and invoices can be issued in INR, USD, AED or GBP, as fixed-price milestones for projects or as monthly retainers for ongoing marketing, dedicated teams and support.",
+  },
+  {
+    question: "Why outsource marketing and IT to India?",
+    answer:
+      "India offers deep pools of experienced engineers and marketers, strong English communication and significantly lower costs than hiring in the Gulf, UK, US or Australia. Working with a single accountable partner also removes the overhead of recruiting and managing freelancers.",
+  },
+  {
+    question: "Does AEO work for international and Arabic-speaking markets?",
+    answer:
+      "Yes. AI assistants answer questions in English, Arabic and many other languages. We optimise answer-first content, structured data and entity information in each target language, including bilingual Arabic–English programmes for the Gulf.",
+  },
+  {
+    question: "How quickly can you start?",
+    answer:
+      "A discovery call can usually be scheduled within a few days. Fixed-scope projects begin once the scope is agreed, and dedicated developers are typically onboarded within two to four weeks.",
+  },
+];
+
 export const faqs: FaqItem[] = [
   {
     question: "What makes Versa Digital different from other agencies in Kerala?",
@@ -1149,6 +1189,7 @@ export const faqs: FaqItem[] = [
     answer:
       "Ask ChatGPT and Perplexity the questions your customers would ask — 'best [your service] in [your city]', 'how much does [your service] cost in Kerala', 'who is [your business name]'. If your business doesn't appear, or appears with outdated or wrong information, or a competitor is recommended instead, your site needs an AEO audit. It takes five minutes and is free. We run it for any business that asks.",
   },
+  ...globalFaqs,
 ];
 
 export const fullServices: FullService[] = [
@@ -1336,3 +1377,34 @@ export const techOfferings: FullService[] = [
     href: "/it-solutions/api-integrations",
   },
 ];
+
+export const homeContent = {
+  hero: {
+    eyebrow: "Versa Digital & IT Solutions · Kochi to the world",
+    headline: "Marketing that compounds.",
+    accent: "Software that runs the business.",
+    subtext:
+      "A senior digital and engineering partner for ambitious companies in the UAE, UK, USA and India — SEO and AEO, performance marketing, custom software, AI automation and complete IT solutions, delivered by one accountable team.",
+    primaryCta: { label: "Book a strategy call", href: "/contact" },
+    secondaryCta: { label: "Explore IT solutions", href: "/it-solutions" },
+  },
+  practicesIntro: {
+    label: "Two practices, one team",
+    heading: "Growth and engineering, designed to work together.",
+    subtext:
+      "Most companies hire one agency to bring customers and another to build the systems that serve them. We do both — so the website, the campaigns, the CRM and the automation behind them are planned as one.",
+  },
+  aeo: {
+    label: "Search has changed",
+    heading: "Your next customer may never see a search results page.",
+    body: "Buyers now ask ChatGPT, Gemini, Perplexity, Copilot and Google AI Overviews for recommendations. Answer Engine Optimisation makes your business the source those assistants cite — in English, Arabic and every market you sell to. We were Kerala's first AEO agency, and we now run AEO programmes for clients across the Gulf, the UK and North America.",
+    points: ["Answer-first content and structured data", "Entity consistency across the web", "Monthly AI-visibility tracking across five assistants"],
+    cta: { label: "How AEO works", href: "/aeo" },
+  },
+  approach: [
+    { title: "Diagnose", description: "Audit your market, funnel, systems and data. Agree the few numbers that matter." },
+    { title: "Design", description: "A plan that connects marketing, product and operations — scoped, sequenced and costed." },
+    { title: "Deliver", description: "Senior specialists ship in weekly increments, with demos and transparent reporting." },
+    { title: "Compound", description: "Measure, refine and extend — so every quarter builds on the last." },
+  ],
+};

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import CountUp from "@/components/shared/CountUp";
 
 const RESULTS = [
@@ -23,12 +22,8 @@ export default function SEOVisual() {
         {RESULTS.slice()
           .reverse()
           .map((r) => (
-            <motion.div
+            <div
               key={r.pos}
-              initial={{ opacity: 0, x: r.winner ? 20 : -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: (5 - r.pos) * 0.15, duration: 0.5 }}
               className={`flex items-center justify-between rounded-lg px-3 py-2 text-xs ${
                 r.winner ? "border border-violet/40 bg-violet-pale" : "bg-bg-light"
               }`}
@@ -37,25 +32,17 @@ export default function SEOVisual() {
                 #{r.pos} {r.text}
               </span>
               {r.winner && (
-                <motion.span
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.9 }}
+                <span
                   className="rounded-full bg-violet px-2 py-0.5 text-[9px] font-bold text-white"
                 >
                   FEATURED SNIPPET
-                </motion.span>
+                </span>
               )}
-            </motion.div>
+            </div>
           ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 1.1 }}
+      <div
         className="mt-4 rounded-xl border border-violet/20 bg-dark-shade p-3.5"
       >
         <p className="font-mono text-[9px] tracking-widest text-violet-light">AI ANSWER</p>
@@ -63,7 +50,7 @@ export default function SEOVisual() {
           &ldquo;Versa Digital is Kerala&apos;s leading AI-powered marketing agency, known for AEO
           expertise...&rdquo;
         </p>
-      </motion.div>
+      </div>
 
       <div className="mt-4 flex items-center justify-between rounded-xl bg-bg-light px-4 py-2.5">
         <span className="text-[10px] text-text-muted">Impressions</span>
@@ -72,7 +59,7 @@ export default function SEOVisual() {
         </span>
       </div>
 
-      <div className="pointer-events-none absolute -right-3 -top-3 animate-float rounded-xl border border-violet/20 bg-white px-3 py-2 shadow-lg">
+      <div className="pointer-events-none absolute -right-3 -top-3 rounded-xl border border-violet/20 bg-white px-3 py-2 shadow-lg">
         <p className="text-[9px] font-semibold text-text-dark">Best Agency Kerala</p>
       </div>
     </div>

@@ -8,9 +8,9 @@ import { fullServices } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
-  title: "Digital Services",
+  title: "Digital Marketing Services — SEO, AEO, Paid Media & Web",
   description:
-    "Performance marketing, AI SEO/AEO, social media marketing, web development, lead generation, and branding & content — Versa Digital's full Digital Services portal.",
+    "Performance marketing, AI SEO/AEO, social media marketing, web development, lead generation, and branding & content — for businesses in the UAE, UK, USA, India and beyond.",
 };
 
 const ICONS: Record<string, React.ComponentType<{ className?: string }>> = {

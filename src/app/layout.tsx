@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Plus_Jakarta_Sans, JetBrains_Mono, Fraunces } from "next/font/google";
+import { Inter_Tight, Plus_Jakarta_Sans, JetBrains_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileStickyBar from "@/components/layout/MobileStickyBar";
-import LoadingScreen from "@/components/layout/LoadingScreen";
-import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 import { siteConfig } from "@/lib/data";
 
-const bricolage = Bricolage_Grotesque({
+const interTight = Inter_Tight({
   subsets: ["latin"],
   variable: "--font-syne",
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -29,55 +27,60 @@ const jetbrainsMono = JetBrains_Mono({
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
-  weight: ["500", "600"],
+  weight: ["400", "500", "600"],
   style: ["italic", "normal"],
 });
 
 const siteUrl = "https://www.versadigital.in";
+const defaultTitle = "Versa Digital & IT Solutions — Digital Marketing, SEO/AEO & IT Solutions";
+const defaultDescription =
+  "Premium digital marketing, SEO and AEO, custom software, AI automation and full IT solutions for businesses in the UAE, UK, USA, Saudi Arabia, Canada, Australia and India — delivered by one senior team from Kochi.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
+    default: defaultTitle,
     template: `%s | ${siteConfig.fullName}`,
   },
-  description:
-    "Kerala's first AEO-driven digital services and IT solutions company. Performance marketing, SEO/AEO, social media, web development and lead generation — plus AI automation, agentic AI projects, custom ERP & CRM development. Kochi, Kerala.",
+  description: defaultDescription,
   keywords: [
+    "digital marketing agency",
+    "AEO agency",
+    "answer engine optimisation",
+    "generative engine optimization",
+    "SEO agency for UAE businesses",
+    "offshore SEO agency UK",
+    "offshore software development company India",
+    "IT solutions company",
+    "custom software development",
+    "mobile app development company",
+    "AI automation agency",
+    "agentic AI development",
+    "custom ERP development",
+    "CRM development",
+    "dedicated developers India",
+    "digital marketing agency Dubai",
+    "IT outsourcing India",
     "Digital marketing Kerala",
-    "AEO agency Kerala",
-    "GEO generative engine optimization",
-    "SEO Kochi",
-    "social media marketing Kerala",
-    "AI marketing agency",
-    "web development Kerala",
-    "IT solutions Kerala",
     "IT solutions company Kochi",
-    "AI automation company Kerala",
-    "agentic AI projects",
-    "AI agentic development",
-    "custom ERP development Kerala",
-    "CRM development Kerala",
-    "ERP CRM HRMS Kerala",
-    "SaaS development Kochi",
     "Versa Digital",
     "Versa Digital IT Solutions",
   ],
   authors: [{ name: siteConfig.fullName }],
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "en_US",
+    alternateLocale: ["en_GB", "en_AE", "en_IN"],
     url: siteUrl,
     siteName: siteConfig.fullName,
-    title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
-    description:
-      "Kerala's first AEO-driven digital services and IT solutions company. Digital marketing that scales your brand, and IT solutions that run your business — custom ERP, CRM, AI automation, agentic AI and SaaS products.",
+    title: defaultTitle,
+    description: defaultDescription,
     images: [{ url: "/logo.jpg", width: 1254, height: 1254, alt: siteConfig.fullName }],
   },
   twitter: {
     card: "summary",
-    title: "Versa Digital & IT Solutions — Digital Services & IT Solutions, Kerala",
-    description: "AI-powered digital marketing and full IT solutions — SEO/AEO, ads, content, AI automation, agentic AI, custom ERP & CRM.",
+    title: defaultTitle,
+    description: "SEO & AEO, performance marketing, custom software, AI automation and IT solutions for the UAE, UK, USA and India.",
   },
   robots: { index: true, follow: true },
   icons: {
@@ -91,15 +94,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bricolage.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${interTight.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}>
       <body className="bg-bg-light font-body text-text-dark antialiased bg-grain">
-        <LoadingScreen />
-        <SmoothScrollProvider>
-          <Navbar />
-          <main className="pb-16 md:pb-0">{children}</main>
-          <Footer />
-          <MobileStickyBar />
-        </SmoothScrollProvider>
+        <Navbar />
+        <main className="pb-16 md:pb-0">{children}</main>
+        <Footer />
+        <MobileStickyBar />
       </body>
     </html>
   );

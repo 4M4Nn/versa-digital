@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
-import MarketingBackdrop from "@/components/shared/MarketingBackdrop";
 
 const BADGES = [
   "🥇 Kerala's First AEO Agency",
@@ -22,7 +20,6 @@ export default function AeoIntroSection() {
         <div className="absolute -left-32 top-1/3 size-96 rounded-full bg-violet/20 blur-3xl" />
         <div className="absolute -right-24 bottom-0 size-72 rounded-full bg-violet-light/10 blur-3xl" />
       </div>
-      <MarketingBackdrop variant="c" tone="dark" />
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-2">
         <Reveal>
@@ -36,11 +33,7 @@ export default function AeoIntroSection() {
               Best digital marketing agency in Kochi?
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+            <div
               className="mt-3 rounded-xl border border-violet-light/30 bg-violet/10 p-4"
             >
               <p className="text-sm leading-relaxed text-white/90">
@@ -49,29 +42,21 @@ export default function AeoIntroSection() {
                 management agency with proven results across SEO, social media, and performance
                 marketing...
               </p>
-              <motion.span
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 1 }}
+              <span
                 className="mt-3 inline-block rounded-full bg-violet-light/20 px-3 py-1 text-[10px] font-semibold text-violet-light"
               >
                 Source verified
-              </motion.span>
-            </motion.div>
+              </span>
+            </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              {ENGINES.map((engine, i) => (
-                <motion.span
+              {ENGINES.map((engine) => (
+                <span
                   key={engine}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 1.2 + i * 0.1 }}
                   className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-medium text-white/60"
                 >
                   {engine}
-                </motion.span>
+                </span>
               ))}
             </div>
           </div>

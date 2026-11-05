@@ -105,7 +105,7 @@ export default async function BlogPostPage({
         <div className="absolute inset-0 bg-gradient-to-t from-bg-dark via-bg-dark/60 to-bg-dark/20" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-3xl px-5 pb-10 md:px-8">
           <span className="rounded-full bg-violet px-3 py-1 text-[10px] font-bold text-white">{post.category}</span>
-          <h1 className="mt-4 font-heading text-3xl font-extrabold text-white md:text-4xl">{post.title}</h1>
+          <h1 className="mt-4 font-heading text-3xl font-semibold text-white md:text-4xl">{post.title}</h1>
           <p className="mt-2 text-sm text-white/70">
             <time dateTime={post.publishedAt}>{post.date}</time> · {post.author}
           </p>

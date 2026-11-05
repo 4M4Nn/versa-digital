@@ -33,7 +33,7 @@ export default function PackagesPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div className="mx-auto max-w-5xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Compare Digital Growth Plans
             </h2>
           </Reveal>
@@ -79,7 +79,7 @@ export default function PackagesPage() {
       <section data-navbar-theme="light" className="bg-bg-light px-5 pb-24 md:px-8">
         <div className="mx-auto max-w-3xl">
           <Reveal>
-            <h2 className="text-center font-heading text-3xl font-extrabold text-text-dark md:text-4xl">
+            <h2 className="text-center font-heading text-3xl font-semibold text-text-dark md:text-4xl">
               Package FAQs
             </h2>
           </Reveal>

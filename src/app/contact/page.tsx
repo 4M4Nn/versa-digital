@@ -5,7 +5,7 @@ import ContactSection from "@/components/home/ContactSection";
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   title: "Contact",
-  description: "Book a free strategy call with Versa Digital. Call, WhatsApp, or fill out our contact form.",
+  description: "Book a free strategy call with Versa Digital & IT Solutions — from India, the UAE, the UK, the USA or anywhere else. Call, WhatsApp or use our contact form.",
 };
 
 export default function ContactPage() {

@@ -57,6 +57,17 @@ export interface ContentPage {
   updatedAt: string;
 }
 
+export type DeliveryModel = "Subcontract" | "White-label" | "Direct client" | "Dedicated team";
+
+export interface ProjectCase extends ContentPage {
+  category: "ERP" | "CRM" | "Web & Portals" | "Mobile Apps" | "AI & Automation" | "QA & Support";
+  industry: string;
+  region: string;
+  deliveryModel: DeliveryModel;
+  stack: string[];
+  scope: string[];
+}
+
 export interface MarketService extends ContentPage {
   market: string;
   service: string;

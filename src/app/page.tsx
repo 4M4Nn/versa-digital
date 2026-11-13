@@ -3,6 +3,7 @@ import HomeHero from "@/components/home/HomeHero";
 import PracticesSection from "@/components/home/PracticesSection";
 import CapabilitiesSection from "@/components/home/CapabilitiesSection";
 import AeoBand from "@/components/home/AeoBand";
+import PartnerSection from "@/components/home/PartnerSection";
 import MarketsSection from "@/components/home/MarketsSection";
 import ProofSection from "@/components/home/ProofSection";
 import InsightsSection from "@/components/home/InsightsSection";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <HomeHero />
       <PracticesSection />
       <CapabilitiesSection />
+      <PartnerSection />
       <AeoBand />
       <MarketsSection />
       <ProofSection />

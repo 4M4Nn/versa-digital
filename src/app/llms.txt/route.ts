@@ -1,4 +1,7 @@
-import { blogPosts, faqs, fullServices, itStats, siteConfig } from "@/lib/data";
+import { blogPosts, faqs, fullServices, itStats, outsourcingFaqs, siteConfig } from "@/lib/data";
+import { outsourcingPages } from "@/lib/content/outsourcing";
+import { erpPages } from "@/lib/content/erp-solutions";
+import { projectCases } from "@/lib/content/projects";
 import { itCatalog, itCategories } from "@/lib/it-services";
 import { markets } from "@/lib/markets";
 import { glossary } from "@/lib/content/glossary";
@@ -38,6 +41,12 @@ export function GET() {
       ...itCatalog.filter((i) => i.category === cat.name).map((i) => `- [${i.name}](${BASE}${i.href}): ${i.description}`),
     ]),
     "",
+    `## Outsourcing & subcontracting ([overview](${BASE}/outsourcing))`,
+    "We are a subcontractor and white-label delivery partner for large IT companies, system integrators, consultancies and agencies.",
+    ...outsourcingPages.map((p) => `- [${p.title}](${BASE}/outsourcing/${p.slug}): ${p.summary}`),
+    "",
+    ...section("ERP solutions", "/erp", erpPages),
+    ...section("IT & ERP projects (client names under NDA)", "/projects", projectCases),
     "## Markets served",
     `- [Global delivery overview](${BASE}/global)`,
     ...markets.map((m) => `- [${m.country}](${BASE}/global/${m.slug}): ${m.metaDescription}`),
@@ -58,7 +67,7 @@ export function GET() {
     ...blogPosts.map((p) => `- [${p.title}](${BASE}/blog/${p.slug}) (${p.publishedAt}): ${p.excerpt}`),
     "",
     "## FAQ",
-    ...faqs.flatMap((f) => [`### ${f.question}`, f.answer, ""]),
+    ...[...outsourcingFaqs, ...faqs].flatMap((f) => [`### ${f.question}`, f.answer, ""]),
   ];
 
   return new Response(lines.join("\n"), {

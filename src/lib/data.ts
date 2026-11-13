@@ -14,6 +14,7 @@ import type {
 import { internationalPosts } from "@/lib/blog-international";
 import { globalPostsGulfUk } from "@/lib/blog-global-1";
 import { globalPostsAmericasApac } from "@/lib/blog-global-2";
+import { outsourcingErpPosts } from "@/lib/blog-outsourcing-erp";
 
 export const siteConfig = {
   name: "Versa Digital",
@@ -409,6 +410,7 @@ export const founders: Founder[] = [
 ];
 
 export const blogPosts: BlogPost[] = [
+  ...outsourcingErpPosts,
   ...internationalPosts,
   ...globalPostsGulfUk,
   ...globalPostsAmericasApac,
@@ -1410,5 +1412,83 @@ export const homeContent = {
     { title: "Design", description: "A plan that connects marketing, product and operations — scoped, sequenced and costed." },
     { title: "Deliver", description: "Senior specialists ship in weekly increments, with demos and transparent reporting." },
     { title: "Compound", description: "Measure, refine and extend — so every quarter builds on the last." },
+  ],
+};
+
+export const outsourcingModels: { name: string; bestFor: string; description: string }[] = [
+  {
+    name: "Subcontracted work packages",
+    bestFor: "System integrators & IT majors",
+    description: "You hold the prime contract; we deliver defined modules, integrations or migrations to your specification, quality gates and timelines.",
+  },
+  {
+    name: "White-label delivery",
+    bestFor: "Agencies & consultancies",
+    description: "We build and support software under your brand. Your client never sees our name, and you set the price.",
+  },
+  {
+    name: "Dedicated teams & ODC",
+    bestFor: "Product companies & long programmes",
+    description: "Named engineers working only on your account, scaling from two people to a full offshore development centre.",
+  },
+  {
+    name: "Staff augmentation",
+    bestFor: "Backfilling roles fast",
+    description: "Individual developers, ERP consultants or QA engineers who join your team under your manager for as long as you need.",
+  },
+];
+
+export const outsourcingPrinciples: { title: string; description: string }[] = [
+  { title: "NDA & non-solicitation as standard", description: "We never approach your clients or staff, and client names stay confidential." },
+  { title: "IP assigned to you", description: "Source code and deliverables pass to you or your client on payment." },
+  { title: "Back-to-back terms", description: "We mirror the SLA, security and data-protection clauses from your prime contract." },
+  { title: "Your tools, your process", description: "Jira, Azure DevOps, GitHub, GitLab, Slack or Teams — we work inside your stack." },
+  { title: "Named, stable engineers", description: "The people you approve stay on your programme, with documented handovers if anyone changes." },
+  { title: "Time-zone overlap", description: "Full overlap with the Gulf, morning overlap with the UK and Europe, and evening shifts for US Eastern time." },
+];
+
+export const outsourcingFaqs: FaqItem[] = [
+  {
+    question: "Does Versa Digital & IT Solutions work as a subcontractor for large IT companies?",
+    answer:
+      "Yes. A significant share of our work is subcontracted to us by larger IT services companies, system integrators and consultancies, who hold the end-client contract while our Kochi team delivers ERP, software, AI, QA and support work packages under NDA.",
+  },
+  {
+    question: "What kind of IT work can be outsourced to you?",
+    answer:
+      "Custom ERP and CRM modules, Odoo and ERPNext customisation, web applications and portals, mobile apps, API and e-invoicing integrations, AI agents and document automation, QA and test automation, data dashboards, legacy modernisation and L2/L3 application support.",
+  },
+  {
+    question: "Can you deliver white-label under our company's brand?",
+    answer: "Yes. Our engineers can use your email domain, templates and branding, and nothing in the code or documents references Versa Digital.",
+  },
+  {
+    question: "How do you protect our client relationships?",
+    answer: "Every engagement includes confidentiality and non-solicitation clauses. We communicate with your end client only when you ask us to, and as part of your team.",
+  },
+  {
+    question: "Why do companies subcontract to a team in Kochi, Kerala?",
+    answer:
+      "Kochi offers a deep pool of engineering talent, lower attrition than India's larger metros, competitive costs and a time zone that overlaps fully with the Gulf and substantially with the UK and Europe.",
+  },
+  {
+    question: "What pricing models do you offer for outsourced work?",
+    answer: "Fixed price per work package, time-and-materials at agreed role rates, or a monthly fee per dedicated engineer. Partners receive net trade pricing.",
+  },
+];
+
+export const homePartnerContent = {
+  label: "Outsourcing & subcontracting",
+  heading: "The engineering team behind other IT companies.",
+  body: "Large IT services companies, system integrators, consultancies and agencies subcontract ERP, software, AI, QA and support work to our Kochi team. They keep the client and the brand; we deliver under NDA, inside their process.",
+  audiences: [
+    { title: "IT services companies", description: "Extra delivery capacity for programmes without permanent hiring." },
+    { title: "System integrators", description: "ERP customisation, integrations and migrations behind your bid." },
+    { title: "Consultancies", description: "An engineering arm to execute the strategy you sell." },
+    { title: "Digital agencies", description: "White-label apps, portals, ERP and AI under your brand." },
+  ],
+  ctas: [
+    { label: "How subcontracting works", href: "/outsourcing" },
+    { label: "See IT & ERP projects", href: "/projects" },
   ],
 };

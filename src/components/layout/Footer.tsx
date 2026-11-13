@@ -35,6 +35,9 @@ const techLinks = FEATURED_IT.map((slug) => itCatalog.find((i) => i.slug === slu
 
 const companyLinks = [
   { label: "About", href: "/about" },
+  { label: "Outsourcing & subcontracting", href: "/outsourcing" },
+  { label: "ERP solutions", href: "/erp" },
+  { label: "IT & ERP projects", href: "/projects" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Insights", href: "/blog" },
   { label: "Industries", href: "/industries" },

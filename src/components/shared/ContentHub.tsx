@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { ContentPage } from "@/types";
@@ -12,6 +13,9 @@ export default function ContentHub({
   trailName,
   pages,
   columns = 3,
+  children,
+  ctaHeading = "Have a specific question?",
+  ctaSubtext = "Ask a senior specialist directly — we answer in your time zone.",
 }: {
   label: string;
   heading: string;
@@ -20,6 +24,9 @@ export default function ContentHub({
   trailName: string;
   pages: ContentPage[];
   columns?: 2 | 3;
+  children?: ReactNode;
+  ctaHeading?: string;
+  ctaSubtext?: string;
 }) {
   return (
     <div>
@@ -44,6 +51,7 @@ export default function ContentHub({
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 md:text-lg">{intro}</p>
         </div>
       </section>
+      {children}
       <section data-navbar-theme="light" className="bg-bg-light px-5 py-20 md:px-8 md:py-24">
         <div
           className={`mx-auto grid max-w-6xl gap-px overflow-hidden rounded-2xl border border-text-dark/10 bg-text-dark/10 sm:grid-cols-2 ${columns === 3 ? "lg:grid-cols-3" : ""}`}
@@ -60,7 +68,7 @@ export default function ContentHub({
           ))}
         </div>
       </section>
-      <ClosingCta heading="Have a specific question?" subtext="Ask a senior specialist directly — we answer in your time zone." />
+      <ClosingCta heading={ctaHeading} subtext={ctaSubtext} />
     </div>
   );
 }

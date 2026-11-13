@@ -7,6 +7,9 @@ import { comparisons } from "@/lib/content/comparisons";
 import { costGuides } from "@/lib/content/cost-guides";
 import { industries } from "@/lib/content/industries";
 import { marketServices } from "@/lib/content/market-services";
+import { outsourcingPages } from "@/lib/content/outsourcing";
+import { erpPages } from "@/lib/content/erp-solutions";
+import { projectCases } from "@/lib/content/projects";
 
 const BASE = "https://www.versadigital.in";
 
@@ -40,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/smm", 0.8),
     page("/it-solutions", 0.9),
     ...itCatalog.map((i) => page(i.href, 0.8)),
+    page("/outsourcing", 0.9),
+    ...outsourcingPages.map((p) => page(`/outsourcing/${p.slug}`, 0.85)),
+    page("/erp", 0.9),
+    ...erpPages.map((p) => page(`/erp/${p.slug}`, 0.85)),
+    page("/projects", 0.8),
+    ...projectCases.map((p) => page(`/projects/${p.slug}`, 0.7)),
     page("/global", 0.9),
     ...markets.map((m) => page(`/global/${m.slug}`, 0.85)),
     ...marketServices.map((s) => page(`/global/${s.market}/${s.slug}`, 0.85)),
